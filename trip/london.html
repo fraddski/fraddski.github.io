@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>London | Europe 2013</title>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="img/city-57.png"/>
+		<link rel="stylesheet" href="css/site.css" type="text/css" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBdwBmIR6FPUqN9RWhiIXhyd1HwpaarGkQ&amp;sensor=false" type="text/javascript"></script>
+		<script src="js/nav.js" type="text/javascript"></script>
+		<script src="js/map.js" type="text/javascript"></script>
+		<script src="js/weather.js" type="text/javascript"></script>
+		<script src="js/currency.js" type="text/javascript"></script>
+		<script src="js/lightbox.js" type="text/javascript"></script>
+	</head>
+	<body class="london">
+		<header>
+			<nav>
+				<a href="./"><img src="img/city.png" alt="" /><span>City</span></a>
+				<ul>
+					<li><a href="./singapore">Singapore</a></li>
+					<li><a href="./zurich">Zurich</a></li>
+					<li><a href="./munich">Munich</a></li>
+					<li><a href="./prague">Prague</a></li>
+					<li><a href="./berlin">Berlin</a></li>
+					<li><a href="./copenhagen">Copenhagen</a></li>
+					<li><a href="./eastpreston">East Preston</a></li>
+					<li><a href="./london">London</a></li>
+				</ul>
+			</nav>
+			<div id="map" class="main-map"></div>
+			<div class="page-title"><h1>London</h1>City of Westminster</div>
+		</header>
+
+		<div class="city-info-banner">
+			<div class="city-banner"></div>
+			<div class="city-info">
+				<div class="arr"><span class="icon font-boost">train</span>Arr Monday 27 May 11:30am</div>
+				<div class="dept"><span class="icon">plane</span>Dept Thursday 30 May 8:35pm</div>
+				<div class="currency-conversion"><div id="currency"></div></div>
+				<div class="weather-forecast"><div id="weather"></div></div>
+				<div class="city-website"><a href="http://www.visitlondon.com" target="_blank">www.visitlondon.com</a></div>
+			</div>
+		</div>
+
+		<div class="city-content">
+			<section>
+				<div class="type-tag font-shrink">hotel</div>
+				<h2>The Hoxton Hotel</h2>
+				<div class="info">
+					<p><span class="icon">location</span> 81 Great Eastern Street, Shoreditch, EC2A 3HU</p>
+					<p><span class="icon font-boost">train</span> Old Street Station (Northern Line)</p>
+					<p><span class="icon">phone</span> +44 20 7550 1000</p>
+					<p><span class="icon">website</span> <a href="http://www.hoxtonhotels.com" target="_blank">www.hoxtonhotels.com</a></p>
+					<p><span class="icon">dates</span> 27 May for 3 nights</p>
+					<p><span class="icon">map</span> <a href="http://maps.google.com.au/maps?saddr=51.1554548,-0.165058499999986450&amp;daddr=51.52531630000001,-0.08337299999993775&amp;dirflg=r" target="_blank">Get directions</a></p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="hotel facade" target="lightbox[hotel]" href="img/lon/hotel-ext.jpg"><img src="img/lon/hotel-ext.jpg" alt="Hotel facade"></a></li>
+					<li><a class="caption" title="hoxton grill" target="lightbox[hotel]" href="img/lon/hotel-bar.jpg"><img src="img/lon/hotel-bar.jpg" alt="Hoxton Grill"></a></li>
+					<li><a class="caption" title="double room" target="lightbox[hotel]" href="img/lon/hotel-room.jpg"><img src="img/lon/hotel-room.jpg" alt="Double room"></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">attraction</div>
+				<h2>Dennis Severs' House</h2>
+				<div class="info">
+					<p><span class="icon">location</span> 18 Folgate Street, Spitalfields, E1 6BX</p>
+					<p><span class="icon">times</span> Monday evenings 6pm to 9pm</p>
+					<p><span class="icon">phone</span> +44 20 7247 4013</p>
+					<p><span class="icon">website</span> <a href="http://www.dennissevershouse.co.uk/" target="_blank">www.dennissevershouse.co.uk</a></p>
+					<p><span class="icon">information</span> Booked for 7pm Monday</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="house facade" target="lightbox[dennissevers]" href="img/lon/dennissevers-ext.jpg"><img src="img/lon/dennissevers-ext.jpg" alt="Dennis Severs' House facade" /></a></li>
+					<li><a class="caption" title="bedroom" target="lightbox[dennissevers]" href="img/lon/dennissevers-room.jpg"><img src="img/lon/dennissevers-room.jpg" alt="Dennis Severs' House bedroom" /></a></li>
+					<li><a class="caption" title="interior" target="lightbox[dennissevers]" href="img/lon/dennissevers-int.jpg"><img src="img/lon/dennissevers-int.jpg" alt="Dennis Severs' House interior" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">restaurant</div>
+				<h2>The Ivy</h2>
+				<div class="info">
+					<p><span class="icon">location</span> 1-5 West Street, WC2H 9NQ</p>
+					<p><span class="icon">phone</span> +44 20 7836 4751</p>
+					<p><span class="icon">website</span> <a href="http://www.the-ivy.co.uk/" target="_blank">www.the-ivy.co.uk</a></p>
+					<p><span class="icon">information</span> Booked for Tuesday lunch time with the parents</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="inside" target="lightbox[ivy]" href="img/lon/ivy-int.jpg"><img src="img/lon/ivy-int.jpg" alt="Interior of The Ivy" /></a></li>
+					<li><a class="caption" title="outside" target="lightbox[ivy]" href="img/lon/ivy-ext.jpg"><img src="img/lon/ivy-ext.jpg" alt="Exterior of The Ivy" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">cafe</div>
+				<h2>The Attendant</h2>
+				<div class="info">
+					<p><span class="icon">location</span> Downstairs, 27a Foley St, W1W 6DY</p>
+					<p><span class="icon font-boost">train</span> Oxford Circus</p>
+					<p><span class="icon">times</span> 8am to 6pm Mon to Fri</p>
+					<p><span class="icon">website</span> <a href="http://www.the-attendant.com" target="_blank">www.the-attendant.com</a></p>
+					<p class="summary">Formally a Victorian toilet built around 1890, this site was transformed in January 2013 into a tiny coffee bar offering a small selection of great-looking food with carefully sourced coffee and milk.</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="facade" target="lightbox[attendant]" href="img/lon/attendant-ext.jpg"><img src="img/lon/attendant-ext.jpg" alt="Roof of The Attendant" /></a></li>
+					<li><a class="caption" title="coffee" target="lightbox[attendant]" href="img/lon/attendant-bar.jpg"><img src="img/lon/attendant-bar.jpg" alt="Latte on a bar constructed using urinals" /></a></li>
+					<li><a class="caption" title="sandwiches" target="lightbox[attendant]" href="img/lon/attendant-food.jpg"><img src="img/lon/attendant-food.jpg" alt="Selection of gourmet sandwiches" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">cafe</div>
+				<h2>Allpress Espresso</h2>
+				<div class="info">
+					<p><span class="icon">location</span> 58 Redchurch Street, Shoreditch, E2 7DP</p>
+					<p><span class="icon">times</span> 8am to 5pm</p>
+					<p><span class="icon">website</span> <a href="http://uk.allpressespresso.com" target="_blank">uk.allpressespresso.com</a></p>
+					<p class="summary">An Australian/New Zealand import, this roastery is a likely spot for a morning coffee and perhaps a spot of brunch.</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="interior" target="lightbox[allpress]" href="img/lon/allpress-int.jpg"><img src="img/lon/allpress-int.jpg" alt="cafe/roastery" /></a></li>
+				</ul>
+			</section>
+		</div>
+
+		<footer>
+			<img src="img/html5-css3.png" alt="HTML5 powered with CSS3" title="HTML5 powered with CSS3" />
+			<a href="./credits">View site credits</a>
+		</footer>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var cityCode = "LON";
+
+				loadMap(document.getElementById("map"), cityCode);
+				getWeather($("#weather"), cityCode);
+				getCurrency($("#currency"), cityCode);
+			});
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-52484746-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>

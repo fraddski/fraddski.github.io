@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Berlin | Europe 2013</title>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="img/city-57.png"/>
+		<link rel="stylesheet" href="css/site.css" type="text/css" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBdwBmIR6FPUqN9RWhiIXhyd1HwpaarGkQ&amp;sensor=false" type="text/javascript"></script>
+		<script src="js/nav.js" type="text/javascript"></script>
+		<script src="js/map.js" type="text/javascript"></script>
+		<script src="js/weather.js" type="text/javascript"></script>
+		<script src="js/currency.js" type="text/javascript"></script>
+		<script src="js/lightbox.js" type="text/javascript"></script>
+	</head>
+	<body class="berlin">
+		<header>
+			<nav>
+				<a href="./"><img src="img/city.png" alt="" /><span>City</span></a>
+				<ul>
+					<li><a href="./singapore">Singapore</a></li>
+					<li><a href="./zurich">Zurich</a></li>
+					<li><a href="./munich">Munich</a></li>
+					<li><a href="./prague">Prague</a></li>
+					<li><a href="./berlin">Berlin</a></li>
+					<li><a href="./copenhagen">Copenhagen</a></li>
+					<li><a href="./eastpreston">East Preston</a></li>
+					<li><a href="./london">London</a></li>
+				</ul>
+			</nav>
+			<div id="map" class="main-map"></div>
+			<div class="page-title"><h1>Berlin</h1></div>
+		</header>
+
+		<div class="city-info-banner">
+			<div class="city-banner"></div>
+			<div class="city-info">
+				<div class="arr"><span class="icon font-boost">train</span>Arr Monday 20 May 7:15pm</div>
+				<div class="dept"><span class="icon">plane</span>Dept Saturday 25 May 9:45am and 10:25am</div>
+				<div class="currency-conversion"><div id="currency"></div></div>
+				<div class="weather-forecast"><div id="weather"></div></div>
+				<div class="city-website"><a href="http://www.visitberlin.de/en" target="_blank">www.visitberlin.de</a></div>
+			</div>
+		</div>
+
+		<div class="city-content">
+			<section>
+				<div class="type-tag font-shrink">hotel</div>
+				<h2>The Circus Hotel</h2>
+				<div class="info">
+					<p><span class="icon">location</span> Rosenthaler Stra&szlig;e 1, 10119, Berlin</p>
+					<p><span class="icon">phone</span> +49 30 2000 3939</p>
+					<p><span class="icon">website</span> <a href="http://www.circus-berlin.de/circus_hotel_berlin.html" target="_blank">www.circus-berlin.de</a></p>
+					<p><span class="icon">dates</span> 20 May for 5 nights</p>
+					<p><span class="icon">map</span> <a href="http://maps.google.com.au/maps?saddr=52.525592,13.369545000000016&amp;daddr=52.53019,13.401604&amp;dirflg=r" target="_blank">Get directions</a></p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="double room" target="lightbox[hotel]" href="img/ber/hotel-room.jpg"><img src="img/ber/hotel-room.jpg" alt="Double room with bed and a window" /></a></li>
+					<li><a class="caption" title="hotel facade" target="lightbox[hotel]" href="img/ber/hotel-ext.jpg"><img src="img/ber/hotel-ext.jpg" alt="Street at night with the hotel building in background" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">attraction</div>
+				<h2>East Side Gallery</h2>
+				<div class="info">
+					<p><span class="icon">location</span> M&uuml;hlenstra&szlig;e 1, 10243 Berlin Friedrichshain</p>
+					<p><span class="icon">website</span> <a href="http://www.eastsidegallery-berlin.de" target="_blank">www.eastsidegallery-berlin.de</a></p>
+					<p class="summary">The Kunstmeile, or art mile, is located along the banks of the river Spree in Friedrichshain. At 1316m long it is the longest open air gallery in the world as well as the longest segment of the Berlin Wall that is still standing.</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="gallery" target="lightbox[gallery]" href="img/ber/wall-gallery.jpg"><img src="img/ber/wall-gallery.jpg" alt="East Side Gallery sign painted on an umbrella" /></a></li>
+					<li><a class="caption" title="trabant" target="lightbox[gallery]" href="img/ber/wall-trabant.jpg"><img src="img/ber/wall-trabant.jpg" alt="Picture of a trabant breaking through the wall" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">attraction</div>
+				<h2>Fat Tire Bike Tours</h2>
+				<div class="info">
+					<p><span class="icon">location</span> Panorama Str 1a 10178 Berlin</p>
+					<p><span class="icon">times</span> All-in-One City Bike Tour leaves daily at 11am &amp; 4pm</p>
+					<p><span class="icon">website</span> <a href="http://fattirebiketours.com/berlin" target="_blank">fattirebiketours.com/berlin</a></p>
+					<p><span class="icon">information</span> Tours meet at the main entrance of the TV Tower in Alexanderplatz.</p>
+					<p class="summary">Covering 10km over 4.5 hours, the all-in-one city bike tour provides a perfect orientation to Berlin.</p>
+					<p>Highlights include Checkpoint Charlie, the Berlin Wall, Hitler's bunker, the Brandenburg Gate, Reichstag, Museum Island, the Memorial to the Murdered Jews of Europe, Bebelplatz and more.</p>
+					<p>Stops for lunch about 2/3 through the tour at a beer garden in the heart of the city park.</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="reichstag" target="lightbox[bike]" href="img/ber/bike-reichstag.jpg"><img src="img/ber/bike-reichstag.jpg" alt="Bike group outside Reichstag" /></a></li>
+					<li><a class="caption" title="checkpoint charlie" target="lightbox[bike]" href="img/ber/bike-checkpoint.jpg"><img src="img/ber/bike-checkpoint.jpg" alt="Checkpoint Charlie booth" /></a></li>
+					<li><a class="caption" title="bebelplatz" target="lightbox[bike]" href="img/ber/bike-bebelplatz.jpg"><img src="img/ber/bike-bebelplatz.jpg" alt="Bike group looking down to the memorial in Bebelplatz" /></a></li>
+					<li><a class="caption" title="berlin wall" target="lightbox[bike]" href="img/ber/bike-wall.jpg"><img src="img/ber/bike-wall.jpg" alt="Bear sculpture in front of the Berlin wall" /></a></li>
+					<li><a class="caption" title="brandenburg gate" target="lightbox[bike]" href="img/ber/bike-brandenburg.jpg"><img src="img/ber/bike-brandenburg.jpg" alt="Bike group in front of the Brandenburg Gate" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">cafe</div>
+				<h2>Bonanza Coffee Heroes</h2>
+				<div class="info">
+					<p><span class="icon">location</span> Oderberger Stra&szlig;e 35, 10435 Berlin Prenzlauer Berg</p>
+					<p><span class="icon">times</span> 8:30am to 7pm</p>
+					<p><span class="icon">website</span> <a href="http://www.bonanzacoffee.de/" target="_blank">www.bonanzacoffee.de</a></p>
+					<p class="summary">Number one on several top coffee lists, Bonanza is "one of the stalwarts of coffee culture in Berlin". With very limited space for customers, they roast on site - a novelty here.</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="facade" target="lightbox[bonanza]" href="img/ber/bonanza-ext.jpg"><img src="img/ber/bonanza-ext.jpg" alt="Benches outside Bonanza" /></a></li>
+					<li><a class="caption" title="good advice" target="lightbox[bonanza]" href="img/ber/bonanza-sign.jpg"><img src="img/ber/bonanza-sign.jpg" alt="Sign advising not to die before trying Bonanza" /></a></li>
+					<li><a class="caption" title="interior" target="lightbox[bonanza]" href="img/ber/bonanza-int.jpg"><img src="img/ber/bonanza-int.jpg" alt="Counter at Bonanza" /></a></li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="type-tag">cafe</div>
+				<h2>The Barn</h2>
+				<div class="info">
+					<p><span class="icon">location</span> Auguststra&szlig;e 58, 10119 Berlin Mitte</p>
+					<p><span class="icon">times</span> 8am to 6pm</p>
+					<p><span class="icon">website</span> <a href="http://www.thebarn.de/barn/kaffee.html" target="_blank">www.thebarn.de</a></p>
+					<p class="summary">Not far from The Circus, this tiny place is passionate about their coffee and offers a small selection of food as well.</p>
+				</div>
+				<ul class="pictures">
+					<li><a class="caption" title="coffee &amp; food" target="lightbox[barn]" href="img/ber/barn-counter.jpg"><img src="img/ber/barn-counter.jpg" alt="Counter at The Barn" /></a></li>
+					<li><a class="caption" title="barista" target="lightbox[barn]" href="img/ber/barn-barista.jpg"><img src="img/ber/barn-barista.jpg" alt="Barista pouring coffee" /></a></li>
+				</ul>
+			</section>
+		</div>
+
+		<footer>
+			<img src="img/html5-css3.png" alt="HTML5 powered with CSS3" title="HTML5 powered with CSS3" />
+			<a href="./credits">View site credits</a>
+		</footer>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var cityCode = "BER";
+
+				loadMap(document.getElementById("map"), cityCode);
+				getWeather($("#weather"), cityCode);
+				getCurrency($("#currency"), cityCode);
+			});
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-52484746-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>

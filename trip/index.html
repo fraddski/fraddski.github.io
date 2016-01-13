@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Europe 2013</title>
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="img/city-57.png"/>
+		<link rel="stylesheet" href="css/site.css" type="text/css" />
+  </head>
+  <body>
+      <h1 class="project-index">Europe Trip, 2013</h1>
+
+      <div id="version-switch-container" style="display:none;"><a href="#" onclick="showAltVersion(); return false;">View html version</a></div>
+
+      <div id="index-alt-content">
+          <nav>
+              <ul>
+                  <li class="singapore"><a href="./singapore">Singapore</a></li>
+                  <li class="zurich"><a href="./zurich">Zurich</a></li>
+                  <li class="munich"><a href="./munich">Munich</a></li>
+                  <li class="prague"><a href="./prague">Prague</a></li>
+                  <li class="berlin"><a href="./berlin">Berlin</a></li>
+                  <li class="copenhagen"><a href="./copenhagen">Copenhagen</a></li>
+                  <li class="eastpreston"><a href="./eastpreston">East Preston</a></li>
+                  <li class="london"><a href="./london">London</a>City of Westminster</li>
+              </ul>
+          </nav>
+      </div>
+
+      <div id="index-map-container" style="display:none;"></div>
+
+      <script type="text/javascript" src="js/kinetic-v4.7.4.min.js"></script>
+      <script type="text/javascript" src="js/nav-map.js"></script>
+      <script type="text/javascript">
+          function isCanvasSupported(){
+              var elem = document.createElement('canvas');
+              return !!(elem.getContext && elem.getContext('2d'));
+          }
+          function showAltVersion(){
+              document.getElementById('index-alt-content').style.display = 'block';
+              document.getElementById('index-map-container').style.display = 'none';
+              document.getElementById('version-switch-container').style.display = 'none';
+              return false;
+          }
+
+          if (isCanvasSupported() && window.innerWidth > 905) {
+              document.getElementById('index-alt-content').style.display = 'none';
+              document.getElementById('index-map-container').style.display = 'block';
+              document.getElementById('version-switch-container').style.display = 'block';
+
+              initialiseMap('index-map-container');
+          }
+      </script>
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-52484746-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+  </body>
+</html>

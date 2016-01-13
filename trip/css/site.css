@@ -1,0 +1,1295 @@
+@import url(//fonts.googleapis.com/css?family=Dosis|Lato:300|Permanent+Marker);
+@font-face
+{
+	font-family: 'Trip';
+	src:url('fonts/Trip.eot');
+	src:url('fonts/Trip.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Trip.woff') format('woff'),
+		url('fonts/Trip.ttf') format('truetype'),
+		url('fonts/Trip.svg#Trip') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/**** reset ****/
+html, body, div, p, h1, h2, h3, h4, h5, ul, ol, li,
+section, header, footer, article
+{
+	margin: 0;
+	padding: 0;
+}
+ul, ol, li
+{
+	list-style: none;
+}
+
+body
+{
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #f1f3f8;
+	color: #333;
+}
+
+
+/**** index navigation map ****/
+h1.project-index
+{
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 46px;
+	text-align: center;
+	margin: 15px 0 0 0;
+}
+#version-switch-container
+{
+	width: 900px;
+	margin: 0px auto;
+	text-align: right;
+	font-size: 0.75em;
+}
+	#version-switch-container a
+	{
+		color: #333;
+		text-decoration: underline;
+	}
+#index-map-container
+{
+    width: 900px;
+    height: 600px;
+    margin: 5px auto 15px auto;
+    background: url('../img/europe.png') top left no-repeat;
+	border: solid 2px #fff;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
+#index-alt-content
+{
+	width: 80%;
+	margin: 15px auto;
+	position: relative;
+	background: url('../img/charlie-skye.png') right top no-repeat;
+}
+	#index-alt-content nav
+	{
+		width: 90%;
+		max-width: 300px;
+		margin: 0 auto 0;
+	}
+		#index-alt-content nav ul
+		{
+		}
+			#index-alt-content nav ul li
+			{
+				display: block;
+				margin: 10px 0px;
+				border-radius: 5px;
+				-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+				-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+				box-shadow: 0 3px 6px rgba(0,0,0,.25);
+			}
+				#index-alt-content nav ul li a
+				{
+					display: block;
+					text-decoration: none;
+					line-height: 50px;
+					font-size: 30px;
+					font-weight: normal;
+					text-align: center;
+					vertical-align: middle;
+					border-radius: 5px;
+					color: #efefef;
+					background-color: #222;
+					padding: 0 20px;
+					-webkit-filter: contrast(1);
+					filter: contrast(1);
+				}
+					#index-alt-content nav ul li a:hover,
+					#index-alt-content nav ul li a:focus,
+					#index-alt-content nav ul li a:active
+					{
+						-webkit-filter: brightness(120%);
+						filter: brightness(120%);
+					}
+
+
+/**** page header ****/
+header
+{
+	height: 200px;
+	border-bottom: solid 1px #bebebe;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	position:relative;
+	z-index:5;
+}
+	header .main-map
+	{
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	header .page-title
+	{
+		position:absolute;
+		top:150px;
+		left:5%;
+		border-radius:5px;
+		-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+		-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+		box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	}
+		header .page-title h1
+		{
+			line-height:60px;
+			font-size:40px;
+			font-weight: normal;
+			vertical-align:middle;
+			border-radius:5px;
+			color:#efefef;
+			padding:0 20px;
+		}
+
+
+/**** navigation ****/
+header nav
+{
+	position: absolute;
+	top:5px;
+	right:15px;
+	height:32px;
+	padding:3px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	background-color: rgba(200, 200, 200, 0.7);
+}
+header nav:hover,
+header nav:focus
+{
+	background-color: rgba(200, 200, 200, 0.9);
+}
+	header nav img
+	{
+		float:left;
+	}
+	header nav span
+	{
+		float:left;
+		line-height:30px;
+		padding:2px 4px 0 10px;
+	}
+	header nav a
+	{
+		color: #333;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 0.85em;
+		text-align: right;
+		display: block;
+		white-space: nowrap;
+	}
+	header nav a:hover,
+	header nav a:focus
+	{
+		background-color: rgba(245, 245, 245, 1);
+	}
+	header nav ul
+	{
+		position: absolute;
+		right: 0;
+		top: 38px;
+		background-color: rgba(200, 200, 200, 0.9);
+		border-top-left-radius:3px;
+		border-bottom-left-radius:3px;
+		border-bottom-right-radius:3px;
+	}
+			header nav ul li a
+			{
+				padding: 10px;
+			}
+
+			header nav ul li:first-child a
+			{
+				border-top-left-radius: 3px;
+			}
+			header nav ul li:last-child a
+			{
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
+
+/**** city information banner ****/
+.city-info-banner
+{
+	position:relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+	.city-info-banner .city-banner
+	{
+		height:300px;
+		width:100%;
+		z-index: -1;
+	}
+
+.city-info
+{
+	position:absolute;
+	left:5%;
+	top:50px;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+	line-height: 32px;
+}
+	.city-info a
+	{
+		color:#fff;
+	}
+	.city-info .icon
+	{
+		padding-right:18px;
+		color:#cfcfcf;
+		text-align:center;
+		width: 32px;
+		font-size: 26px;
+	}
+	.city-info .icon.font-boost { font-size: 28px; }
+	.city-info .icon.font-shrink { font-size: 24px; }
+	.city-info .arr, .city-info .dept
+	{
+		padding-bottom: 5px;
+	}
+
+/**** main body ****/
+.city-content
+{
+	position:relative;
+	width: 90%;
+	margin: 0 auto 20px;
+	font-size: 0.9em;
+}
+.site-credit-info
+{
+	width:90%;
+	margin:20px auto;
+	font-size: 0.9em;
+	border: solid 1px #e5e7eb;
+	background-color: #fff;
+}
+	.site-credit-info div
+	{
+		position: relative;
+		padding: 10px 20px;
+		border-radius:3px;
+		line-height:1.4em;
+		display: table;
+		clear: both;
+	}
+		.site-credit-info div p
+		{
+			padding: 6px 0;
+		}
+	.site-credit-info ul
+	{
+		margin:0 0 10px 20px;
+	}
+		.site-credit-info ul li
+		{
+			list-style-type:disc;
+		}
+
+/**** footer ****/
+footer
+{
+	clear:both;
+	font-size:0.75em;
+	padding:10px 5%;
+	background-color:#dadbe0;
+	overflow:hidden;
+	line-height: 30px;
+}
+	footer a, footer img
+	{
+		color:#333;
+		float:left;
+		margin-right:20px;
+		text-decoration:underline;
+	}
+
+/**** currency ****/
+.currency-conversion
+{
+	height: 32px;
+	padding-left: 50px;
+	padding-bottom: 5px;
+}
+
+/**** weather ****/
+.weather-forecast
+{
+	line-height:32px;
+}
+	.weather-forecast .item
+	{
+		overflow:hidden;
+		padding-bottom:5px;
+	}
+	.weather-forecast img
+	{
+		float: left;
+		padding-right: 20px;
+	}
+	.weather-forecast .day,
+	.weather-forecast .forecast,
+	.weather-forecast .temps
+	{
+		white-space: nowrap;
+		float:left;
+		padding-right:13px;
+	}
+	.weather-forecast .day
+	{
+		font-weight: bold;
+	}
+	.weather-forecast .forecast
+	{
+		font-style:italic;
+	}
+	.weather-forecast .temps .high,
+	.weather-forecast .temps .low
+	{
+		font-weight:bold;
+		font-size:1.2em;
+	}
+	.weather-forecast .temps .high
+	{
+		color:#D90202;
+	}
+	.weather-forecast .temps .low
+	{
+		color:#32AAE6;
+		padding-right:10px;
+	}
+
+
+/**** hotel & attraction sections ****/
+section
+{
+	position: relative;
+	padding: 10px 20px;
+	margin: 30px 0px;
+	border: solid 1px #e5e7eb;
+	background-color: #fff;
+	border-radius:3px;
+	line-height:1.4em;
+	/*display: table;*/
+	clear: both;
+	overflow:visible;
+}
+	section .indicator
+	{
+		position: absolute;
+		top:-3px;
+		right:-3px;
+		width:50px;
+		height:50px;
+		z-index:100;
+	}
+	section h2
+	{
+		margin:10px 0 30px 45px;
+		font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+	}
+	section .info
+	{
+		float:left;
+		max-width:50%;
+	}
+	section .summary
+	{
+		padding-top:5px;
+	}
+	section p
+	{
+		padding-bottom: 10px;
+		padding-right:10px;
+	}
+	section .icon
+	{
+		font-size:1.3em;
+		vertical-align:middle;
+		color: #444;
+		padding-right:10px;
+	}
+	section .icon.font-boost
+	{
+		font-size: 1.5em;
+	}
+section:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/**** icons ****/
+.icon, .type-tag
+{
+	font-family: 'Trip';
+	/* Enable Ligatures */
+	-moz-font-feature-settings:"liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	-moz-font-feature-settings:"liga=1, dlig=1, hlig=1, clig=1";
+	-ms-font-feature-settings:"liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	-o-font-feature-settings:"liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	-webkit-font-feature-settings:"liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	font-feature-settings:"liga" 1, "dlig" 1, "hlig" 1, "clig" 1;
+	text-rendering:optimizeLegibility;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.type-tag
+{
+	position:absolute;
+	top:-4px;
+	left:-4px;
+	color:#fff;
+	width:68px;
+	height:65px;
+	padding:15px 0px 0px 13px;
+	font-size:20px;
+	text-shadow:0 1px 0 rgba(50,50,50,0.5);
+}
+.type-tag.font-shrink { font-size:15px; }
+.type-tag.font-boost { font-size:22px; }
+
+/**** picture list, polaroid style ****/
+ul.pictures
+{
+	overflow: visible;
+	float: right;
+	width: 50%;
+}
+	ul.pictures li
+	{
+		float: right;
+		width: 33%;
+		min-width: 125px;
+	}
+		ul.pictures li a.caption
+		{
+			float: left;
+			display: inline-block;
+			background-color: #FFF;
+			padding: 10px 0px;
+			width: 100%;
+			border: solid 1px #BBB;
+			border-radius: 3px;
+			-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+			-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+			box-shadow: 0 3px 6px rgba(0,0,0,.25);
+			font-family: "Permanent Marker", Arial, sans-serif;
+			color: #222;
+			font-size: 14px;
+			text-decoration: none;
+			text-align: center;
+			-webkit-transform: rotate(-2deg);
+			-moz-transform: rotate(-2deg);
+			transform: rotate(-2deg);
+			-webkit-transition: -webkit-transform .15s linear;
+			transition: transform .15s linear;
+		}
+		ul.pictures li a.caption:after
+		{
+			content: attr(title);
+		}
+			ul.pictures li a img
+			{
+				display: block;
+				width: 90%;
+				margin: 0px auto 5px auto;
+				border: solid 1px #EEE;
+				-webkit-filter: contrast(1);
+				filter: contrast(1);
+			}
+			ul.pictures li a.caption:hover img
+			{
+				-webkit-filter: brightness(120%);
+				filter: brightness(120%);
+			}
+		ul.pictures li a.non-clickable
+		{
+			cursor: default;
+		}
+
+		ul.pictures li:nth-child(even) a.caption
+		{
+			-webkit-transform: rotate(2deg);
+			-moz-transform: rotate(2deg);
+			transform: rotate(2deg);
+		}
+		ul.pictures li:nth-child(3) a.caption,
+		ul.pictures li:nth-child(7) a.caption
+		{
+			-webkit-transform: none;
+			-moz-transform: none;
+			transform: none;
+			position: relative;
+			top: -5px;
+		}
+		ul.pictures li:nth-child(5n) a.caption
+		{
+			-webkit-transform: rotate(-4deg);
+			-moz-transform: rotate(-4deg);
+			transform: rotate(-4deg);
+			position: relative;
+			right: 5px;
+		}
+
+/**** lightbox ****/
+#lightboxOverlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  opacity: 0.6;
+  display: none;
+}
+
+#lightbox
+{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-weight: normal;
+}
+	#lightbox img
+	{
+	  width: auto;
+	  height: auto;
+	}
+	#lightbox a img
+	{
+	  border: solid 1px #EEE;
+	}
+
+.lb-outerContainer
+{
+  position: relative;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border: solid 1px #BBB;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+.lb-outerContainer:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-container
+{
+	padding: 15px 15px 70px 15px;
+}
+	.lb-container img.lb-image
+	{
+		border: solid 1px #EEE;
+		display: block;
+	}
+	.lb-container caption
+	{
+		display: block;
+		font-family: "Permanent Marker", Arial, sans-serif;
+		color:#222;
+		font-size:36px;
+		text-decoration:none;
+		text-align:center;
+		padding-top:30px;
+		position:absolute;
+		width:350px;
+	}
+#lightbox .lb-loader
+{
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+	#lightbox .lb-loader a img
+	{
+		border:none;
+	}
+
+
+/********** CUSTOM CITY STYLES **********/
+
+/**** page headings, based on signage ****/
+.singapore .page-title,
+#index-alt-content li.singapore
+{
+	border:none;
+	border-radius: 30px;
+}
+	.singapore .page-title h1,
+	#index-alt-content li.singapore a
+	{
+		border:solid 3px #efefef;
+		background-color: #00997c;
+		border-radius: 30px;
+		padding:0 30px;
+	}
+.zurich .page-title,
+.munich .page-title,
+#index-alt-content li.zurich,
+#index-alt-content li.munich
+{
+	border:solid 4px #2222aa;
+}
+	.zurich .page-title h1,
+	.munich .page-title h1,
+	#index-alt-content li.zurich a,
+	#index-alt-content li.munich a
+	{
+		border:solid 3px #efefef;
+		background-color:#2222aa;
+	}
+.prague .page-title,
+#index-alt-content li.prague
+{
+	border: solid 4px #34416d;
+}
+	.prague .page-title h1,
+	#index-alt-content li.prague a
+	{
+		border:solid 3px #efefef;
+		background-color:#a62627;
+	}
+.berlin .page-title,
+#index-alt-content li.berlin
+{
+	border:none;
+	border-radius:2px;
+}
+	.berlin .page-title h1,
+	#index-alt-content li.berlin a
+	{
+		background-color: #fefefe;
+		color: #111;
+		border-radius:2px;
+		border:solid 5px #8b9aaf;
+	}
+.copenhagen .page-title,
+#index-alt-content li.copenhagen
+{
+	border:none;
+}
+	.copenhagen .page-title h1,
+	#index-alt-content li.copenhagen a
+	{
+		background-color:#333;
+		border:solid 3px #232323;
+		color:#efefef;
+		text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+	}
+.eastpreston .page-title,
+#index-alt-content li.eastpreston
+{
+}
+	.eastpreston .page-title h1,
+	#index-alt-content li.eastpreston a
+	{
+		background-color:#fff;
+		color:#222;
+		border:solid 4px #222;
+	}
+.london .page-title,
+#index-alt-content li.london
+{
+	background-color:#fff;
+	text-transform:uppercase;
+	color:#9d2524;
+	font-weight:bold;
+	font-size:0.9em;
+	text-align:center;
+	border:solid 5px #222;
+	padding-bottom:4px;
+}
+	.london .page-title h1,
+	#index-alt-content li.london a
+	{
+		border-bottom:solid 2px #222;
+		background-color:#fff;
+		color:#222;
+		border-radius:0;
+		margin-bottom:4px;
+	}
+.site-credit .page-title
+{
+	background-color:#fff;
+	border:solid 3px #777;
+}
+	.site-credit .page-title h1
+	{
+		color:#444;
+	}
+
+/**** city banner image ****/
+.singapore .city-banner
+{
+	background: rgb(70,70,70) url('../img/sin/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/sin/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/sin/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/sin/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/sin/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/sin/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/sin/skyline.jpg') top right no-repeat; /* W3C */
+}
+.zurich .city-banner
+{
+	background: rgb(70,70,70) url('../img/zrh/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/zrh/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/zrh/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/zrh/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/zrh/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/zrh/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/zrh/skyline.jpg') top right no-repeat; /* W3C */
+}
+.munich .city-banner
+{
+	background: rgb(70,70,70) url('../img/muc/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/muc/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/muc/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/muc/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/muc/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/muc/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/muc/skyline.jpg') top right no-repeat; /* W3C */
+}
+.prague .city-banner
+{
+	background: rgb(70,70,70) url('../img/prg/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/prg/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/prg/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/prg/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/prg/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/prg/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/prg/skyline.jpg') top right no-repeat; /* W3C */
+}
+.berlin .city-banner
+{
+	background: rgb(70,70,70) url('../img/ber/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/ber/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/ber/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/ber/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/ber/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/ber/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/ber/skyline.jpg') top right no-repeat; /* W3C */
+}
+.copenhagen .city-banner
+{
+	background: rgb(70,70,70) url('../img/cph/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/cph/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/cph/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/cph/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/cph/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/cph/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/cph/skyline.jpg') top right no-repeat; /* W3C */
+}
+.eastpreston .city-banner
+{
+	background: rgb(70,70,70) url('../img/epr/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/epr/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/epr/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/epr/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/epr/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/epr/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/epr/skyline.jpg') top right no-repeat; /* W3C */
+}
+.london .city-banner
+{
+	background: rgb(70,70,70) url('../img/lon/skyline.jpg') top right no-repeat;
+	background: -moz-linear-gradient(right,  rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/lon/skyline.jpg') top right no-repeat; /* FF3.6+ */
+	background: -webkit-gradient(linear, right top, left top, color-stop(200px,rgba(0,0,0,0)), color-stop(650px,rgba(70,70,70,.5)), color-stop(1000px,rgba(70,70,70,1))), url('../img/lon/skyline.jpg') top right no-repeat; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 550px, rgba(70,70,70,1) 1000px), url('../img/lon/skyline.jpg') top right no-repeat; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/lon/skyline.jpg') top right no-repeat; /* Opera 11.10+ */
+	background: -ms-linear-gradient(right, rgba(0,0,0,0) 200px, rgba(70,70,70,.5) 650px, rgba(70,70,70,1) 1000px), url('../img/lon/skyline.jpg') top right no-repeat; /* IE10+ */
+	background: linear-gradient(to left, rgba(0,0,0,0) 200px, rgba(70,70,70,0.5) 650px, rgba(70,70,70,1) 1000px), url('../img/lon/skyline.jpg') top right no-repeat; /* W3C */
+}
+
+/**** currency - country flags ****/
+.singapore .currency-conversion { background: url('../img/flag-sg.png') 0px 0px no-repeat; }
+.zurich .currency-conversion { background: url('../img/flag-ch.png') 0px 0px no-repeat; }
+.munich .currency-conversion, .berlin .currency-conversion { background: url('../img/flag-de.png') 0px 0px no-repeat; }
+.prague .currency-conversion { background: url('../img/flag-cz.png') 0px 0px no-repeat; }
+.copenhagen .currency-conversion { background: url('../img/flag-dk.png') 0px 0px no-repeat; }
+.eastpreston .currency-conversion, .london .currency-conversion { background: url('../img/flag-gb.png') 0px 0px no-repeat; }
+
+/**** ribbon images - mirror signage colours ****/
+.singapore .type-tag { background:url('../img/ribbon-singapore.png') left top no-repeat; }
+.zurich .type-tag { background:url('../img/ribbon-zurich.png') left top no-repeat; }
+.munich .type-tag { background:url('../img/ribbon-munich.png') left top no-repeat; }
+.prague .type-tag { background:url('../img/ribbon-prague.png') left top no-repeat; }
+.berlin .type-tag { background:url('../img/ribbon-berlin.png') left top no-repeat; }
+.copenhagen .type-tag { background:url('../img/ribbon-copenhagen.png') left top no-repeat; }
+.eastpreston .type-tag { background:url('../img/ribbon-eastpreston.png') left top no-repeat; }
+.london .type-tag { background:url('../img/ribbon-london.png') left top no-repeat; }
+
+
+
+/********** SMALLER - below 1025px **********/
+
+@media (max-width:1025px)
+{
+	header
+	{
+		height:100px;
+	}
+		header .page-title
+		{
+			top:3px;
+		}
+	.city-info-banner .city-banner
+	{
+		height:250px;
+	}
+	.city-info-banner .city-info
+	{
+		top:15px;
+	}
+	.singapore .city-banner
+	{
+		background: rgb(70,70,70) url('../img/sin/skyline.jpg') 40% 90% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,.5) 400px, rgba(70,70,70,1) 800px), url('../img/sin/skyline.jpg') 40% 90% no-repeat; /* Chrome10+,Safari5.1+ */
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/sin/skyline.jpg') 40% 90% no-repeat; /* W3C */
+
+	}
+	.zurich .city-banner
+	{
+		background: rgb(70,70,70) url('../img/zrh/skyline.jpg') 50% 50% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/zrh/skyline.jpg') 50% 50% no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/zrh/skyline.jpg') 50% 50% no-repeat;
+	}
+	.munich .city-banner
+	{
+		background: rgb(70,70,70) url('../img/muc/skyline.jpg') 70% 0% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/muc/skyline.jpg') 70% 0% no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/muc/skyline.jpg') 70% 0% no-repeat;
+	}
+	.prague .city-banner
+	{
+		background: rgb(70,70,70) url('../img/prg/skyline.jpg') 30% 50% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/prg/skyline.jpg') 30% 50% no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/prg/skyline.jpg') 30% 50% no-repeat;
+	}
+	.berlin .city-banner
+	{
+		background: rgb(70,70,70) url('../img/ber/skyline.jpg') top right no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/ber/skyline.jpg') top right no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/ber/skyline.jpg') top right no-repeat;
+	}
+	.copenhagen .city-banner
+	{
+		background: rgb(70,70,70) url('../img/cph/skyline.jpg') 50% 50% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/cph/skyline.jpg') 50% 50% no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/cph/skyline.jpg') 50% 50% no-repeat;
+	}
+	.eastpreston .city-banner
+	{
+		background: rgb(70,70,70) url('../img/epr/skyline.jpg') 50% 50% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/epr/skyline.jpg') 50% 50% no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/epr/skyline.jpg') 50% 50% no-repeat;
+	}
+	.london .city-banner
+	{
+		background: rgb(70,70,70) url('../img/lon/skyline.jpg') 70% 30% no-repeat;
+		background: -webkit-linear-gradient(right, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/lon/skyline.jpg') 70% 30% no-repeat;
+		background: linear-gradient(to left, rgba(0,0,0,0) 100px, rgba(70,70,70,0.5) 400px, rgba(70,70,70,1) 800px), url('../img/lon/skyline.jpg') 70% 30% no-repeat;
+	}
+	section .info
+	{
+		max-width:100%;
+		min-width:auto;
+	}
+	ul.pictures
+	{
+		float:left;
+		clear:both;
+		width:100%;
+		margin:10px 0;
+	}
+		ul.pictures li
+		{
+			float:left;
+			width:25%;
+		}
+			ul.pictures li a.caption
+			{
+				font-size:16px;
+			}
+}
+
+
+/********** SMALLER - below 770px **********/
+
+@media (max-width:770px)
+{
+	#index-alt-content
+	{
+		width: 95%;
+		background-position: 50% 0;
+		margin-top: 0px;
+	}
+		#index-alt-content nav
+		{
+			padding-top: 200px;
+		}
+
+	header
+	{
+		height:0;
+		text-align:center;
+	}
+	header.site-credit
+	{
+		height:100px;
+	}
+		header nav
+		{
+			top: 216px;
+			right: 5%;
+			background-color: #f1f3f8;
+		}
+		header.site-credit nav
+		{
+			top:5px;
+			right:15px;
+			background-color:transparent;
+		}
+		header .main-map
+		{
+			display: none;
+		}
+		header.site-credit .main-map
+		{
+			display:block;
+		}
+		header .page-title
+		{
+			top: 8px;
+			left: 0;
+			position: relative;
+			display: inline-block;
+		}
+		header.site-credit .page-title
+		{
+			top: -90px;
+		}
+
+	.city-info-banner .city-banner
+	{
+		height: 250px;
+	}
+	.city-info-banner .city-info
+	{
+		position: relative;
+		padding: 10px 0px 20px;
+		border: solid 1px #e5e7eb;
+		background-color: #fff;
+		border-radius: 3px;
+		display: table;
+		clear: both;
+		width: 90%;
+		color: #333;
+		text-shadow: none;
+	}
+		.city-info-banner .city-info .arr,
+		.city-info-banner .city-info .dept,
+		.city-info-banner .city-info .currency-conversion,
+		.city-info-banner .city-info .weather-forecast,
+		.city-info-banner .city-info .city-website
+		{
+			margin-left: 20px;
+		}
+		.city-info-banner .city-info .icon
+		{
+			color: #333;
+		}
+		.city-info-banner .city-info a
+		{
+			color: #333;
+		}
+	.singapore .city-banner
+	{
+		background: rgb(70,70,70) url('../img/sin/skyline.jpg') 28% 80% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,.5) 180px, rgba(70,70,70,1) 245px), url('../img/sin/skyline.jpg') 28% 80% no-repeat; /* Chrome10+,Safari5.1+ */
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/sin/skyline.jpg') 28% 80% no-repeat; /* W3C */
+	}
+	.zurich .city-banner
+	{
+		background: rgb(70,70,70) url('../img/zrh/skyline.jpg') 58% 30% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/zrh/skyline.jpg') 58% 30% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/zrh/skyline.jpg') 58% 30% no-repeat;
+	}
+	.munich .city-banner
+	{
+		background: rgb(70,70,70) url('../img/muc/skyline.jpg') 75% 0% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/muc/skyline.jpg') 75% 0% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/muc/skyline.jpg') 75% 0% no-repeat;
+	}
+	.prague .city-banner
+	{
+		background: rgb(70,70,70) url('../img/prg/skyline.jpg') 50% 50% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/prg/skyline.jpg') 50% 50% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/prg/skyline.jpg') 50% 50% no-repeat;
+	}
+	.berlin .city-banner
+	{
+		background: rgb(70,70,70) url('../img/ber/skyline.jpg') 35% 0% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/ber/skyline.jpg') 35% 0% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/ber/skyline.jpg') 35% 0% no-repeat;
+	}
+	.copenhagen .city-banner
+	{
+		background: rgb(70,70,70) url('../img/cph/skyline.jpg') 70% 0% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/cph/skyline.jpg') 70% 0% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/cph/skyline.jpg') 70% 0% no-repeat;
+	}
+	.eastpreston .city-banner
+	{
+		background: rgb(70,70,70) url('../img/epr/skyline.jpg') 70% 0% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/epr/skyline.jpg') 70% 0% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/epr/skyline.jpg') 70% 0% no-repeat;
+	}
+	.london .city-banner
+	{
+		background: rgb(70,70,70) url('../img/lon/skyline.jpg') 81% 0% no-repeat;
+		background: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/lon/skyline.jpg') 81% 0% no-repeat;
+		background: linear-gradient(to top, rgba(0,0,0,0) 70px, rgba(70,70,70,0.5) 180px, rgba(70,70,70,1) 245px), url('../img/lon/skyline.jpg') 81% 0% no-repeat;
+	}
+	ul.pictures li
+	{
+		width:33%;
+	}
+		ul.pictures li a.caption
+		{
+			font-size: 16px;
+		}
+}
+
+
+/********** SMALLER - below 600px **********/
+
+@media (max-width:600px)
+{
+	ul.pictures li a.caption
+	{
+		font-size: 14px;
+	}
+}
+
+
+/********** SMALLER - below 520px **********/
+
+@media (max-width:520px)
+{
+	nav ul li a
+	{
+		font-size:1em;
+	}
+	.city-content
+	{
+		font-size:1em;
+	}
+	ul.pictures li
+	{
+		width:50%;
+	}
+		ul.pictures li a.caption
+		{
+			font-size: 16px;
+		}
+}
+
+
+/********** SMALLEST - below 382px **********/
+
+@media (max-width:382px)
+{
+	ul.pictures li
+	{
+		width:100%;
+	}
+		ul.pictures li a.caption
+		{
+			font-size: 22px;
+		}
+}
+
+
+/********** LARGER - above 1200px **********/
+
+@media (min-width:1200px)
+{
+	section .info
+	{
+		max-width:40%;
+	}
+	ul.pictures
+	{
+		width:60%;
+	}
+		ul.pictures li
+		{
+			width:25%;
+		}
+}
+
+
+/********** LARGER - above 1400px **********/
+
+@media (min-width:1400px)
+{
+	.city-info-banner, .city-content
+	{
+		max-width: 2100px;
+	}
+	header .page-title
+	{
+		top:30px;
+		box-shadow: 0px 0px 10px rgba(0,0,0,.6);
+	}
+	.city-info-banner
+	{
+		width:90%;
+	}
+		.city-info-banner .city-banner
+		{
+			float:right;
+			width:45%;
+			padding:0 21px;
+			border-radius:3px;
+			margin:20px 0;
+			height:282px;
+		}
+		.singapore .city-banner
+		{
+			background: url('../img/sin/skyline.jpg') 40% 60% no-repeat;
+		}
+		.zurich .city-banner
+		{
+			background: url('../img/zrh/skyline.jpg') 50% 50% no-repeat;
+		}
+		.munich .city-banner
+		{
+			background: url('../img/muc/skyline.jpg') 70% 00% no-repeat;
+		}
+		.prague .city-banner
+		{
+			background: url('../img/prg/skyline.jpg') 20% 50% no-repeat;
+		}
+		.berlin .city-banner
+		{
+			background: url('../img/ber/skyline.jpg') 80% 50% no-repeat;
+		}
+		.copenhagen .city-banner
+		{
+			background: url('../img/cph/skyline.jpg') 50% 50% no-repeat;
+		}
+		.eastpreston .city-banner
+		{
+			background: url('../img/epr/skyline.jpg') 50% 50% no-repeat;
+		}
+		.london .city-banner
+		{
+			background: url('../img/lon/skyline.jpg') 70% 30% no-repeat;
+		}
+		.city-info-banner .city-info
+		{
+			top:0;
+			left:0;
+			float:left;
+			width:45%;
+			height:220px;
+			padding:30px 20px;
+			border:solid 1px #e5e7eb;
+			border-radius:3px;
+			margin:20px 0;
+			background-color:#fff;
+			color:#333;
+			text-shadow:none;
+		}
+			.city-info-banner .city-info .icon,
+			.city-info-banner .city-info a
+			{
+				color: #333;
+				text-shadow:none;
+			}
+	.city-content section
+	{
+		clear:none;
+		width:45%;
+		margin:20px 0;
+	}
+	.city-content section:nth-child(odd)
+	{
+		float:left;
+		clear:left;
+	}
+	.city-content section:nth-child(even)
+	{
+		float:right;
+		clear:right;
+	}
+	.city-content section .info
+	{
+		max-width:100%;
+		min-width:auto;
+	}
+	ul.pictures
+	{
+		float:left;
+		clear:both;
+		width:100%;
+		margin:10px 0;
+	}
+		ul.pictures li
+		{
+			float:left;
+			width:25%;
+		}
+}
+
+
+/********** LARGEST - above 1900px **********/
+
+@media (min-width:1900px)
+{
+	ul.pictures li
+	{
+		width:20%;
+	}
+}

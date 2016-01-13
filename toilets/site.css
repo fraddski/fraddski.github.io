@@ -1,0 +1,340 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300);
+
+@-webkit-keyframes zoomin {
+  0%   { transform: scale(0.7); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@-webkit-keyframes fadeout {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes slidein {
+  0%   { right: -100%; }
+  100% { right: 0; }
+}
+@-webkit-keyframes slideout {
+  0%   { right: 0; }
+  100% { right: -100%; }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f3f8;
+  color: #333;
+  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+h1, h2, h3 {
+  font-family: 'Lato', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+  #map.locating {
+    line-height: 1.25em;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: -0.8em;
+    font-size: 1.125em;
+  }
+
+
+#infoDialog {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  overflow: hidden;
+  z-index: 10000;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: solid 1px #999;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+  #infoDialog.showing {
+    -webkit-animation: zoomin 0.5s;
+    animation: zoomin 0.5s;
+  }
+  #infoDialog.hiding {
+    -webkit-animation: fadeout 0.3s;
+    animation: fadeout 0.3s;
+    opacity: 0;
+  }
+
+#infoDialog a {
+  color: #e12794;
+  text-decoration: none;
+  border-bottom: solid 1px #e12794;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+  #infoDialog a:hover, #infoDialog a:focus {
+    color: #ea6ab5;
+    border-bottom-color: transparent;
+  }
+
+#infoDialog h1 {
+  font-size: 1.7rem;
+  margin-top: 0.3rem;
+}
+#infoDialog h2 {
+  font-size: 1.4em;
+  padding: 0.7em 0 0.2em;
+}
+
+#infoDialog button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: none;
+  border: solid 1px #333;
+  padding: 0.4em;
+  font-size: 1em;
+  border-radius: 3px;
+  width: 2em;
+  height: 2em;
+}
+  #infoDialog button svg {
+    height: 100%;
+    width: 100%;
+    fill: #333;
+  }
+  #infoDialog button:hover,
+  #infoDialog button:active {
+    border-color: #bbb;
+  }
+  #infoDialog button:hover svg,
+  #infoDialog button:active svg {
+    fill: #bbb;
+  }
+
+#infoDialog .content-wrap {
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
+#infoDialog #itemContent {
+  min-height: 100%;
+  margin-top: -2.5rem;
+  margin-bottom: -2.6rem;
+}
+  #infoDialog #itemContent:before,
+  #infoDialog #itemContent:after {
+    content: '';
+    display: block;
+  }
+  #infoDialog #itemContent:before {
+    height: 2.5rem;
+  }
+  #infoDialog #itemContent:after,
+  #infoDialog .info-footer {
+    height: 2.6rem;
+  }
+
+p.notes {
+  font-style: italic;
+  margin: 0 0 0.5em 0;
+}
+
+#infoDialog ul.icons {
+  margin: 3em 0 1em;
+  padding: 0;
+  position: relative;
+}
+  #infoDialog ul.icons:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+#infoDialog ul.icons li {
+  display: inline-block;
+  width: 50%;
+  padding: 0;
+  margin: 0 0 1.5em 0;
+  float: left;
+}
+
+#infoDialog .icons svg {
+  width: 100%;
+  height: 3em;
+  fill: #333;
+}
+  #infoDialog .icons svg.yes,
+  #infoDialog .icons svg.yes use>svg {
+    fill: #e12794;
+  }
+  #infoDialog .icons svg.no,
+  #infoDialog .icons svg.no use>svg {
+    fill: #bebebe;
+  }
+
+#infoDialog .icons p {
+  text-align: center;
+  margin: 0.3em 0;
+}
+
+#infoDialog .info-footer {
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+
+@media (min-width:560px) {
+  #infoDialog .content-wrap {
+    padding: 1em;
+  }
+  #infoDialog ul.icons {
+    display: flex;
+    justify-content: center;
+  }
+  #infoDialog ul.icons li {
+    flex: 1 1;
+    max-width: 150px;
+  }
+}
+
+@media (min-width:780px) {
+  #infoDialog {
+    width: 40%;
+    max-width: 600px;
+    min-width: 400px;
+    height: 100%;
+    left: auto;
+    top: 0;
+    right: 0;
+    box-shadow: -1px 0px 3px rgba(0,0,0,0.3);
+    border-radius: 0;
+    border: none;
+    border-left: solid 1px #999;
+  }
+    #infoDialog.showing {
+      -webkit-animation: slidein 0.5s;
+      animation: slidein 0.5s;
+    }
+    #infoDialog.hiding {
+      -webkit-animation: slideout 0.3s;
+      animation: slideout 0.3s;
+      opacity: 1;
+      right: 100%;
+    }
+
+  #infoDialog ul.icons {
+    display: block;
+    margin-top: 4em;
+  }
+  #infoDialog ul.icons li {
+    width: 50%;
+    flex: none;
+    max-width: 250px;
+  }
+
+  #infoDialog .icons svg {
+    height: 4em;
+  }
+}
+
+
+
+#relocateDialog {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  overflow: hidden;
+  z-index: 10000;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: solid 1px #999;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+  #relocateDialog:focus {
+    outline: none;
+  }
+
+#relocateDialog button.close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: none;
+  border: solid 1px #333;
+  padding: 0.4em;
+  font-size: 1em;
+  border-radius: 3px;
+  width: 2em;
+  height: 2em;
+  transition: all 200ms ease-in;
+}
+  #relocateDialog button.close svg {
+    height: 100%;
+    width: 100%;
+    fill: #333;
+  }
+  #relocateDialog button.close:hover,
+  #relocateDialog button.close:focus,
+  #relocateDialog button.close:active {
+    border-color: #bbb;
+  }
+  #relocateDialog button.close:hover svg,
+  #relocateDialog button.close:focus svg,
+  #relocateDialog button.close:active svg {
+    fill: #bbb;
+  }
+
+#relocateDialog .content-wrap {
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 2.5em 0.5em 1em 0.5em;
+  text-align: center;
+}
+  #relocateDialog .content-wrap button {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.3em;
+    white-space: nowrap;
+    background: #eee;
+    border: solid 1px #333;
+    border-radius: 3px;
+    padding: 1em;
+    margin: 1.5em 0.5em;
+    color: #111;
+    transition: background-color 200ms ease-in;
+  }
+    #relocateDialog .content-wrap button:hover,
+    #relocateDialog .content-wrap button:focus,
+    #relocateDialog .content-wrap button:active {
+      background-color: #1d1f20;
+      color: #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    }
+  #relocateDialog .content-wrap button[type="submit"] {
+    background-color: rgba(225, 39, 148, 0.6);
+  }
+    #relocateDialog .content-wrap button[type="submit"]:hover,
+    #relocateDialog .content-wrap button[type="submit"]:focus,
+    #relocateDialog .content-wrap button[type="submit"]:active {
+      background-color: rgba(225, 39, 148, 1);
+    }

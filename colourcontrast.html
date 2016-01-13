@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Where I keep my internet things." />
+
+		<title>Colour Contrast Checker</title>
+
+		<link rel="shortcut icon" href="/favicon.ico?1" />
+		<link rel="stylesheet" href="/css/site.css" type="text/css" />
+		
+    <script src="js/modernizr.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+    
+
+<div class="main-content">
+  <h1>Colour Contrast Checker</h1>
+
+  <div id="colour_selection" class="colour-selection">
+    <input type="text" id="colour_foreground" value="000000" />
+    <input type="text" id="colour_background" value="FFFFFF" />
+    <div id="ratio" class="ratio"><span></span></div>
+  </div>
+
+  <ul id="results" class="contrast-results">
+    <li><div id="aa_small" class="stamp small" tabindex="0">AA<div class="tooltip"></div></div></li>
+    <li><div id="aa_large" class="stamp large" tabindex="0">AA<div class="tooltip"></div></div></li>
+    <li><div id="aaa_small" class="stamp small" tabindex="0">AAA<div class="tooltip"></div></div></li>
+    <li><div id="aaa_large" class="stamp large" tabindex="0">AAA<div class="tooltip"></div></div></li>
+  </ul>
+
+  <h2 class="contrast-sample-header">These colours would look like this:</h2>
+  <div id="sample" class="contrast-sample">
+    <section>
+      <h3>1984</h3>
+      <h4>George Orwell</h4>
+      <p>
+        Winston kept his back turned to the telescreen. It was safer; though, as he
+        well knew, even a back can be revealing. A kilometre away the Ministry of
+        Truth, his place of work, towered vast and white above the grimy landscape.
+        This, he thought with a sort of vague distaste - this was London, chief
+        city of Airstrip One, itself the third most populous of the provinces of
+        Oceania. He tried to squeeze out some childhood memory that should tell him
+        whether London had always been quite like this. Were there always these
+        vistas of rotting nineteenth-century houses, their sides shored up with
+        baulks of timber, their windows patched with cardboard and their roofs
+        with corrugated iron, their crazy garden walls sagging in all directions?
+        And the bombed sites where the plaster dust swirled in the air and the
+        willow-herb straggled over the heaps of rubble; and the places where the
+        bombs had cleared a larger patch and there had sprung up sordid colonies
+        of wooden dwellings like chicken-houses? But it was no use, he could not
+        remember: nothing remained of his childhood except a series of bright-lit
+        tableaux occurring against no background and mostly unintelligible.
+      </p>
+      <p>
+        The Ministry of Truth - Minitrue, in Newspeak - was startlingly different from
+        any other object in sight. It was an enormous pyramidal structure of glittering
+        white concrete, soaring up, terrace after terrace, 300 metres into the air.
+        From where Winston stood it was just possible to read, picked out on its white
+        face in elegant lettering, the three slogans of the Party:
+      </p>
+      <p>
+        <em>
+          War is Peace<br/>
+          Freedom is Slavery<br/>
+          Ignorance is Strength<br/>
+        </em>
+      </p>
+    </section>
+    <section>
+      <p>"I am too fond of reading books to care to write them."</p>
+      <p>-- Oscar Wilde, <em>The Picture of Dorian Gray</em></p>
+    </section>
+    <section>
+      <p>"Fantasy is an exercise bicycle for the mind. It might not take you anywhere, but it tones up the muscles that can. Of course, I could be wrong."</p>
+      <p>-- Terry Pratchett</p>
+    </section>
+    <section>
+      <h3>David Copperfield</h3>
+      <h4>Charles Dickens</h4>
+      <p>
+        My meaning simply is, that whatever I have tried to do in life, I have tried with all my heart to do well; that whatever I have devoted myself to, I have devoted myself to completely; that in great aims and in small, I have always been thoroughly in earnest.
+      </p>
+    </section>
+  </div>
+  <footer class="contrast-footer">
+    <p>See <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">understanding success criterion 1.4.3</a> for more information</p>
+  </footer>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/colourcontrast.js"></script>
+
+
+		<script src="js/site.min.js" type="text/javascript"></script>
+		<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-52484746-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+	</body>
+</html>

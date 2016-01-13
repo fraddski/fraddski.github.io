@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Where I keep my internet things." />
+
+		<title>a11y checklist</title>
+
+		<link rel="shortcut icon" href="/favicon.ico?1" />
+		<link rel="stylesheet" href="/css/site.css" type="text/css" />
+		
+    <script src="js/modernizr.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+    
+
+<div class="main-content">
+  <h1>Accessibility checklist</h1>
+  <p class="tagline">
+    A quick checklist to help when aiming for WCAG 2.0 Level AA.<br/>
+    Not a comprehensive reference, and does not utilise WAI-ARIA enhancements.
+  </p>
+
+  
+  <section class="checkable-list">
+    <h2>Images</h2>
+    <ul>
+      
+      <li><input id="img1" type="checkbox" /><label for="img1">All images have alt text. Empty for decorative, full text equivalent for informative.</label></li>
+      
+      <li><input id="img2" type="checkbox" /><label for="img2">No informative images from CSS.</label></li>
+      
+      <li><input id="img3" type="checkbox" /><label for="img3">No images of text (with the exception of site logo).</label></li>
+      
+      <li><input id="img4" type="checkbox" /><label for="img4">CAPTCHA - really shouldn't be used, must at least have audio equivalent.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Visual design</h2>
+    <ul>
+      
+      <li><input id="vis1" type="checkbox" /><label for="vis1">Colour contrast passes on headings and body text. See the <a href="/colourcontrast">Colour Contrast Checker</a>.</label></li>
+      
+      <li><input id="vis2" type="checkbox" /><label for="vis2">Links should be underlined. Else, contrast with surrounding text must be &gt; 3.</label></li>
+      
+      <li><input id="vis3" type="checkbox" /><label for="vis3">Keyboard focus is shown visually.</label></li>
+      
+      <li><input id="vis4" type="checkbox" /><label for="vis4">No information is lost in greyscale.</label></li>
+      
+      <li><input id="vis5" type="checkbox" /><label for="vis5">Okay when zoomed to 200%.</label></li>
+      
+      <li><input id="vis6" type="checkbox" /><label for="vis6">No flashing content (faster than 3 per second).</label></li>
+      
+      <li><input id="vis7" type="checkbox" /><label for="vis7">Moving content can be paused, or stops after 5 seconds.</label></li>
+      
+      <li><input id="vis8" type="checkbox" /><label for="vis8">Location alone is not used to provide information.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Page structure</h2>
+    <ul>
+      
+      <li><input id="struct1" type="checkbox" /><label for="struct1">Headings! Also list items. Check with CSS turned off.</label></li>
+      
+      <li><input id="struct2" type="checkbox" /><label for="struct2">Markup has a logical reading order (keyboard focus too).</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Navigation</h2>
+    <ul>
+      
+      <li><input id="nav1" type="checkbox" /><label for="nav1">Page titles - informative, front-loaded, succinct, unique.</label></li>
+      
+      <li><input id="nav2" type="checkbox" /><label for="nav2">Site map / search / index available.</label></li>
+      
+      <li><input id="nav3" type="checkbox" /><label for="nav3">Navigation is consistent across pages.</label></li>
+      
+      <li><input id="nav4" type="checkbox" /><label for="nav4">Purpose is clear for all links (out of context).</label></li>
+      
+      <li><input id="nav5" type="checkbox" /><label for="nav5">Bonus points for skip links.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Forms</h2>
+    <ul>
+      
+      <li><input id="form1" type="checkbox" /><label for="form1">Labels with <code>for</code> attribute. Clear and informative text.</label></li>
+      
+      <li><input id="form2" type="checkbox" /><label for="form2">Correct use of <code>fieldset</code> if used, especially <code>legend</code>.</label></li>
+      
+      <li><input id="form3" type="checkbox" /><label for="form3">Validation - required fields indicated, and error summary receives focus.</label></li>
+      
+      <li><input id="form4" type="checkbox" /><label for="form4">If split into several steps, a confirmation screen is shown.</label></li>
+      
+      <li><input id="form5" type="checkbox" /><label for="form5">No time limits on data entry (or limit is extendable).</label></li>
+      
+      <li><input id="form6" type="checkbox" /><label for="form6">No action on dropdown change.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Maps</h2>
+    <ul>
+      
+      <li><input id="map1" type="checkbox" /><label for="map1">Ensure information is not shown with colour alone.</label></li>
+      
+      <li><input id="map2" type="checkbox" /><label for="map2">Important information is also available as text.</label></li>
+      
+      <li><input id="map3" type="checkbox" /><label for="map3">Interactive components can be reached and activated from the keyboard.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Multimedia</h2>
+    <ul>
+      
+      <li><input id="mm1" type="checkbox" /><label for="mm1">Keyboard accessible (no traps!).</label></li>
+      
+      <li><input id="mm2" type="checkbox" /><label for="mm2">Captions + transcript best for video.</label></li>
+      
+      <li><input id="mm3" type="checkbox" /><label for="mm3">Audio can be stopped, or stops after 3 seconds.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Flash</h2>
+    <ul>
+      
+      <li><input id="flash1" type="checkbox" /><label for="flash1">Keyboard accessibility, activation, and focus order.</label></li>
+      
+      <li><input id="flash2" type="checkbox" /><label for="flash2">Test with a screen reader.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Language</h2>
+    <ul>
+      
+      <li><input id="lang1" type="checkbox" /><label for="lang1"><code>lang</code> attributes set.</label></li>
+      
+      <li><input id="lang2" type="checkbox" /><label for="lang2">Clear, plain English.</label></li>
+      
+      <li><input id="lang3" type="checkbox" /><label for="lang3">Informative, front-loaded headings.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Tables</h2>
+    <ul>
+      
+      <li><input id="table1" type="checkbox" /><label for="table1">Avoid complex tables where possible - try converting to simple.</label></li>
+      
+    </ul>
+  </section>
+  
+  <section class="checkable-list">
+    <h2>Scripting</h2>
+    <ul>
+      
+      <li><input id="scrp1" type="checkbox" /><label for="scrp1">When elements change, they receive focus / are read out as appropriate.</label></li>
+      
+      <li><input id="scrp2" type="checkbox" /><label for="scrp2">Keyboard interaction works as expected.</label></li>
+      
+      <li><input id="scrp3" type="checkbox" /><label for="scrp3">Additional information is provided for scripted controls where the purpose is not obvious. E.g. tabs, slideshow, etc.</label></li>
+      
+    </ul>
+  </section>
+  
+</div>
+
+
+		<script src="js/site.min.js" type="text/javascript"></script>
+		<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-52484746-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+	</body>
+</html>
