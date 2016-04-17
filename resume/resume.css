@@ -1695,23 +1695,23 @@ ul, li, dl, dt, dd {
   *, a {
     color: #000;
   }
-  body {
-    line-height: 1.5em;
+  html {
+    font-size: 13px;
   }
   h1, h2, h3, h4, h5 {
     font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
     font-weight: bold;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 0 0 1rem;
   }
   h2 {
-  	font-size: 1.4rem;
+  	font-size: 1.2rem;
   	margin: 2rem 0 0.5rem;
   }
   h3 {
-  	font-size: 1.2rem;
+  	font-size: 1.1rem;
   	margin: 1rem 0 1rem;
   }
   h4 {
@@ -1720,9 +1720,16 @@ ul, li, dl, dt, dd {
   }
   h5 {
     font-size: 1rem;
-    color: #555;
-    margin: 1rem 0 0.3rem;
+    font-weight: normal;
+    float: left;
+    padding: 0.5rem 0.5rem 0 0;
   }
+    h5:after {
+      content: ':';
+    }
+    h5 + p {
+      padding-top: 0.5rem;
+    }
   p {
     margin: 0.3rem 0;
   }
