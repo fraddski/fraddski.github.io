@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="resume.css" type="text/css" />
     <script type="text/javascript" src="modernizr.min.js"></script>
   </head>
-  <body class="reader">
+  <body class="reader" tabindex="-1">
     <h1>Resumé</h1>
 
     <div class="summary-group">
@@ -614,7 +614,7 @@
 
     <div id="toggleWallOn" class="toggle-on" tabindex="-1">
       <p>Psst! Tired of the same dull resumés?</p>
-      <button id="btnInteresting" type="button" class="yep">Make it interesting</button>
+      <button id="btnInteresting" type="button" class="yep">Make it interesting <span class="screen-reader">(This has a visual effect only.)</span></button>
       <button id="btnNope" type="button" class="nope">No thanks</button>
     </div>
     <div id="toggleWallOff" class="toggle-off">

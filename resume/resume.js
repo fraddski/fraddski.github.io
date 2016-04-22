@@ -2,6 +2,7 @@
 function Book(bookElem) {
   this.elem = bookElem;
 
+  this.spine = this.elem.querySelectorAll('.spine')[0];
   this.frontCover = this.elem.querySelectorAll('.front-cover')[0];
   this.backCover = this.elem.querySelectorAll('.back-cover')[0];
   this.pages = this.elem.querySelectorAll('.page');
@@ -18,7 +19,7 @@ function Book(bookElem) {
   }
   this.pageTurnDuration = durationMS || 400;
 
-  this.elem.querySelectorAll('.spine')[0].addEventListener('click', this.handleClick.bind(this));
+  this.spine.addEventListener('click', this.handleClick.bind(this));
 }
 
 Book.prototype.handleClick = function(e) {
@@ -46,6 +47,7 @@ Book.prototype.shelve = function() {
     this.removeNavigation();
     this.elem.classList.add('add-to-shelf');
     this.elem.classList.remove('remove-from-shelf');
+    this.spine.focus();
   }
 }
 
@@ -64,6 +66,7 @@ Book.prototype.turnForwards = function() {
         this.elem.classList.remove('open');
         this.elem.classList.add('closed');
         this.backCover.classList.add('turned');
+        this.navElem.querySelectorAll('.prev')[0].focus();
       } else {
         this.pages[this.pageIndex * 2].classList.add('turned');
         this.surfacePage(this.pageIndex * 2 + 1);
@@ -88,6 +91,7 @@ Book.prototype.turnBackwards = function() {
       if (this.pageIndex === 1) {
         this.elem.classList.remove('open');
         this.frontCover.classList.remove('turned');
+        this.navElem.querySelectorAll('.next')[0].focus();
       } else {
         this.pages[this.pageIndex * 2 - 3].classList.remove('turned');
         this.surfacePage(this.pageIndex * 2 - 3);
@@ -113,13 +117,6 @@ Book.prototype.addNavigation = function() {
   var bookNav = document.createElement('nav');
   bookNav.setAttribute('aria-label', 'Navigate book pages. These controls have a visual effect only.');
 
-  var closeBtn = document.createElement('button');
-  closeBtn.innerHTML = 'Close book';
-  closeBtn.classList.add('close');
-  closeBtn.setAttribute('title', 'Close book');
-  closeBtn.addEventListener('click', this.closeSelf.bind(this));
-  bookNav.appendChild(closeBtn);
-
   var prevBtn = document.createElement('button');
   prevBtn.innerHTML = 'Previous page';
   prevBtn.classList.add('prev');
@@ -133,6 +130,13 @@ Book.prototype.addNavigation = function() {
   nextBtn.setAttribute('title', 'Next page');
   nextBtn.addEventListener('click', this.turnForwards.bind(this));
   bookNav.appendChild(nextBtn);
+
+  var closeBtn = document.createElement('button');
+  closeBtn.innerHTML = 'Close book';
+  closeBtn.classList.add('close');
+  closeBtn.setAttribute('title', 'Close book');
+  closeBtn.addEventListener('click', this.closeSelf.bind(this));
+  bookNav.appendChild(closeBtn);
 
   this.navElem = bookNav;
   this.elem.insertBefore(bookNav, this.elem.querySelectorAll('.front-cover')[0]);
@@ -192,6 +196,7 @@ function makeInteresting() {
     toggleStyles();
     toggleOffer.classList.remove('hide');
     toggleOffer.classList.remove('show');
+    document.body.focus();
   }, 250);
 }
 
@@ -201,6 +206,11 @@ function makePlain() {
 
 function dismissToggle() {
   toggleOffer.classList.add('hide');
+  setTimeout(function() {
+    toggleOffer.classList.remove('show');
+    toggleOffer.classList.remove('hide');
+    document.body.focus();
+  }, 250);
 }
 
 
