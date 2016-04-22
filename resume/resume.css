@@ -659,7 +659,8 @@ ul, li, dl, dt, dd {
     background-color: #212121;
     border-radius: 0.5rem 0 0;
   }
-  .wall .profiles .github:hover {
+  .wall .profiles .github:hover,
+  .wall .profiles .github:focus {
     -webkit-filter: brightness(2.5) drop-shadow(1px 2px 2px rgba(0,0,0,0.1));
     filter: brightness(2.5) drop-shadow(1px 2px 2px rgba(0,0,0,0.1));
   }
@@ -683,7 +684,8 @@ ul, li, dl, dt, dd {
     box-shadow: inset 0.5rem 0.5rem 0.5rem 0.1rem rgba(255,255,255,0.75),
                 0px 0px 10px rgba(100,100,100,0.1);
   }
-    .wall .profiles .codepen:hover:before {
+    .wall .profiles .codepen:hover:before,
+    .wall .profiles .codepen:focus:before {
       background: radial-gradient(circle, rgba(255,255,255,0.5) 25%, transparent 25%) 0 0,
                   radial-gradient(circle, rgba(255,255,255,0.8) 20%, transparent 20%) 0.7rem 0.3rem,
                   radial-gradient(circle, rgba(255,255,255,0.9) 18%, transparent 18%) 0.3rem 0.6rem,
@@ -914,9 +916,10 @@ ul, li, dl, dt, dd {
 /* states */
 /**********/
 
-.wall .spine:hover {
-  -webkit-filter: brightness(1.1);
-  filter: brightness(1.1);
+.wall .spine:hover,
+.wall .spine:focus {
+  -webkit-filter: contrast(1.2);
+  filter: contrast(1.2);
 }
 
 .wall .remove-from-shelf {
@@ -1566,7 +1569,8 @@ ul, li, dl, dt, dd {
     -webkit-filter: none;
     filter: none;
   }
-    .wall .profiles .github:hover {
+    .wall .profiles .github:hover,
+    .wall .profiles .github:focus {
       -webkit-filter: none;
       filter: none;
     }
@@ -1581,7 +1585,8 @@ ul, li, dl, dt, dd {
       box-shadow: inset 0.5rem 0.5rem 0.5rem 0.1rem rgba(255,255,255,0.75),
                   0px 0px 10px rgba(100,100,100,0.1);
     }
-      .wall .profiles .github:hover:before {
+      .wall .profiles .github:hover:before,
+      .wall .profiles .github:focus:before {
         background: radial-gradient(circle, rgba(255,255,255,0.5) 25%, transparent 25%) 0 0,
                     radial-gradient(circle, rgba(255,255,255,0.8) 20%, transparent 20%) 0.7rem 0.3rem,
                     radial-gradient(circle, rgba(255,255,255,0.9) 18%, transparent 18%) 0.3rem 0.6rem,
