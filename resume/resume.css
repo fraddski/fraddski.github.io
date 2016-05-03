@@ -22,12 +22,15 @@ html {
   font-size: 16px;
 }
 body {
-  font-size: 1rem;
+  font-size: 1em;
   margin: 0;
   padding: 0;
   font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
   color: #333;
   outline: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -86,27 +89,27 @@ ul, li, dl, dt, dd {
 }
 
 .reader h1 {
-  font-size: 2.6rem;
+  font-size: 2.6em;
   line-height: 1.3em;
   padding-bottom: 1rem;
   text-align: center;
   text-transform: lowercase;
 }
 .reader h2 {
-	font-size: 1.9rem;
+	font-size: 1.9em;
 	margin: 3rem 0 0.7rem;
 }
 .reader h3 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	margin: 1.2rem 0 0.5rem;
 }
 .reader h4 {
-  font-size: 1.3rem;
+  font-size: 1.3em;
   margin-bottom: 0.8rem;
   padding-top: 1rem;
 }
 .reader h5 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   margin: 0.8rem 0 0.5rem;
 }
 
@@ -142,7 +145,7 @@ ul, li, dl, dt, dd {
   top: -3rem;
   right: 1rem;
   padding: 4rem 2rem 1rem;
-  font-size: 1rem;
+  font-size: 1em;
   text-align: center;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.6);
@@ -167,7 +170,7 @@ ul, li, dl, dt, dd {
   .reader .toggle-on .yep,
   .reader .toggle-on .nope {
     border: none;
-    font-size: 1rem;
+    font-size: 1em;
     width: 100%;
     cursor: pointer;
   }
@@ -309,16 +312,16 @@ ul, li, dl, dt, dd {
     left: 5%;
   }
   .reader h1 {
-    font-size: 2.6rem;
+    font-size: 2.6em;
   }
   .reader h2 {
-  	font-size: 1.9rem;
+  	font-size: 1.9em;
   }
   .reader h3 {
-  	font-size: 1.5rem;
+  	font-size: 1.5em;
   }
   .reader h4 {
-    font-size: 1.3rem;
+    font-size: 1.3em;
   }
 }
 @media (max-width: 43rem) {
@@ -345,16 +348,16 @@ ul, li, dl, dt, dd {
     left: 0;
   }
   .reader h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .reader h2 {
-  	font-size: 1.6rem;
+  	font-size: 1.6em;
   }
   .reader h3 {
-  	font-size: 1.4rem;
+  	font-size: 1.4em;
   }
   .reader h4 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
   .reader .experience .book header {
     border-bottom: none;
@@ -415,13 +418,12 @@ ul, li, dl, dt, dd {
   background: linear-gradient(45deg, transparent 37%, #f0e7dd 37%, #f0e7dd 63%, transparent 63%) #FAF0E6;
   background-size: 4px 4px;
   box-shadow: 0 0 0 0.3rem #987264,
-    0 0 0 0.4rem #795548,
-    0 0 0 0.7rem #987264;
+              0 0 0 0.4rem #795548,
+              0 0 0 0.7rem #987264;
   margin: 1.1rem 0.7rem 0.7rem;
   font-family: 'Home Sweet Home';
   color: #546E7A;
   text-align: center;
-  font-size: 0.8em;
 }
   .wall .about:before {
     content: '';
@@ -438,12 +440,13 @@ ul, li, dl, dt, dd {
     position: relative;
     text-indent: 0;
     font-family: 'Home Sweet Home';
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin-bottom: 0.7rem;
   }
   .wall .about p {
     margin: 0 auto;
     width: 80%;
+    font-size: 0.8em;
   }
     .wall .about p .love {
       position: absolute;
@@ -531,7 +534,7 @@ ul, li, dl, dt, dd {
       position: absolute;
       top: -0.5rem;
       left: -0.5rem;
-      background: linear-gradient(-45deg, transparent 20%, rgba(255,255,255,0.2) 40%, transparent 60%);
+      background: linear-gradient(-45deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 60%);
     }
 
 
@@ -574,12 +577,13 @@ ul, li, dl, dt, dd {
     display: block;
   }
   .wall .degree .student,
-  .wall .degree .degree-title {
-    font-weight: bold;
-    font-size: 1.1em;
-  }
+  .wall .degree .degree-title,
   .wall .degree .distinction {
     font-size: 1.1em;
+  }
+  .wall .degree .student,
+  .wall .degree .degree-title {
+    font-weight: bold;
   }
   .wall .degree .student {
     padding: 1.8rem 0 0.8rem;
@@ -617,7 +621,7 @@ ul, li, dl, dt, dd {
       top: -0.5rem;
       left: -0.5rem;
       border-radius: 50%;
-      background: linear-gradient(-45deg, transparent 20%, rgba(255,255,255,0.3) 40%, transparent 60%);
+      background: linear-gradient(-45deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.3) 40%, rgba(255,255,255,0) 60%);
     }
 
 
@@ -739,7 +743,7 @@ ul, li, dl, dt, dd {
   margin-top: 2rem;
   transform-style: preserve-3d;
   transform-origin: bottom right;
-  transition: all 0.4s linear;
+  transition: transform 0.4s linear;
   transform: perspective(1000px)
              rotateY(87deg)
              translateX(6rem);    /* distance to experience */
@@ -755,7 +759,8 @@ ul, li, dl, dt, dd {
   top: 0;
   right: 100%;
   text-decoration: none;
-  transition: inherit;
+  transition: transform 0.4s linear;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: right center;
   transform: rotateY(-90deg);
@@ -768,9 +773,11 @@ ul, li, dl, dt, dd {
   position: absolute;
   height: 100%;
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: left center;
-  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  transition: transform 0.4s linear;
   width: 14rem;     /* book width */
 }
 
@@ -808,7 +815,7 @@ ul, li, dl, dt, dd {
   width: 0;
   top: 0;
   background-color: rgba(0,0,0,0.1);
-  transition: inherit;
+  transition: width 0.4s linear;
 }
 .wall .page:after {
   /* page curves, top and bottom */
@@ -821,7 +828,7 @@ ul, li, dl, dt, dd {
   border-radius: 50%;
   border: solid 0px transparent;
   border-top-color: rgba(0,0,0,0.2);
-  transition: inherit;
+  transition: all 0.4s linear;
   box-shadow: 0px -18rem 0px 0px #fff;       /* book height */
   box-shadow: 0px -18rem 0px 0px #fff,
               0px calc(-18rem - 1px) 1px 0px rgba(100,100,100,0.1);   /* book height */
@@ -861,7 +868,7 @@ ul, li, dl, dt, dd {
   text-indent: -3000px;
   overflow: hidden;
   opacity: 0.5;
-  transition: all 0.4s ease;
+  transition: opacity 0.4s ease;
 }
   .wall .prev:hover,
   .wall .prev:focus,
@@ -1017,7 +1024,7 @@ ul, li, dl, dt, dd {
   justify-content: space-between;
 }
   .wall .front-cover h3 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     text-align: center;
     padding: 0.7rem 1rem 0;
     font-weight: bold;
@@ -1025,14 +1032,14 @@ ul, li, dl, dt, dd {
     .wall .front-cover h3 .secondary {
       display: block;
       font-size: 0.65em;
-      padding-top: 0.7rem;
       line-height: 1.3em;
+      padding-top: 0.7rem;
       font-weight: normal;
     }
   .wall .front-cover .details {
     height: 35%;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.85em;
   }
     .wall .front-cover .details p {
       margin: 1rem;
@@ -1062,7 +1069,7 @@ ul, li, dl, dt, dd {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
   .wall .back-cover h4 {
     font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
@@ -1098,7 +1105,7 @@ ul, li, dl, dt, dd {
 .wall .page {
   font-family: 'Georgia', serif;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   line-height: 1.3em;
   color: #222;
 }
@@ -1184,7 +1191,7 @@ ul, li, dl, dt, dd {
   background-color: #1976D2;
 }
 .wall .sms .front-cover h3 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 .wall .enett .spine {
   background: url('img/enett.png') 50% 88% no-repeat,
@@ -1214,7 +1221,7 @@ ul, li, dl, dt, dd {
   background-color: #43A047;
 }
 .wall .startnextweek .front-cover h3 {
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 .wall .advantech .spine {
   background: url('img/advantech.png') 50% 92% no-repeat,
@@ -1414,12 +1421,12 @@ ul, li, dl, dt, dd {
   }
 }
 
-@media (max-width: 37rem) {
+@media (max-width: 42rem) {
   .wall .shelf-group {
     width: 100%;
   }
   .wall .experience {
-    padding: 0 13%;
+    padding: 0 18%;
     justify-content: center;
   }
     .wall .experience:before {
@@ -1606,6 +1613,11 @@ ul, li, dl, dt, dd {
       border-right: 1.5rem solid transparent;
     }
 }
+@media (max-width: 37rem) {
+  .wall .experience {
+    padding: 0 13%;
+  }
+}
 @media (max-width: 34rem) {
   .wall .experience {
     padding: 0 10%;
@@ -1719,23 +1731,23 @@ ul, li, dl, dt, dd {
     font-weight: bold;
   }
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.3em;
     margin: 0 0 1rem;
   }
   h2 {
-  	font-size: 1.2rem;
+  	font-size: 1.2em;
   	margin: 2rem 0 0.5rem;
   }
   h3 {
-  	font-size: 1.1rem;
+  	font-size: 1.1em;
   	margin: 1rem 0 1rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 1em;
     margin: 1.5rem 0 0.5rem;
   }
   h5 {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: normal;
     float: left;
     padding: 0.5rem 0.5rem 0 0;

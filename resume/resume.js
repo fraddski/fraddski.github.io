@@ -47,7 +47,7 @@ Book.prototype.shelve = function() {
     this.removeNavigation();
     this.elem.classList.add('add-to-shelf');
     this.elem.classList.remove('remove-from-shelf');
-    this.spine.focus();
+    //this.spine.focus();
   }
 }
 
@@ -121,26 +121,23 @@ Book.prototype.addNavigation = function() {
   prevBtn.innerHTML = 'Previous page';
   prevBtn.classList.add('prev');
   prevBtn.setAttribute('title', 'Previous page');
-  prevBtn.addEventListener('click', this.turnBackwards.bind(this));
   bookNav.appendChild(prevBtn);
 
   var nextBtn = document.createElement('button');
   nextBtn.innerHTML = 'Next page';
   nextBtn.classList.add('next');
   nextBtn.setAttribute('title', 'Next page');
-  nextBtn.addEventListener('click', this.turnForwards.bind(this));
   bookNav.appendChild(nextBtn);
 
   var closeBtn = document.createElement('button');
   closeBtn.innerHTML = 'Close book';
   closeBtn.classList.add('close');
   closeBtn.setAttribute('title', 'Close book');
-  closeBtn.addEventListener('click', this.closeSelf.bind(this));
   bookNav.appendChild(closeBtn);
 
   this.navElem = bookNav;
   this.elem.insertBefore(bookNav, this.elem.querySelectorAll('.front-cover')[0]);
-  nextBtn.focus();
+  //nextBtn.focus();
 }
 
 Book.prototype.removeNavigation = function() {
@@ -148,12 +145,6 @@ Book.prototype.removeNavigation = function() {
     this.elem.removeChild(this.navElem);
   }
 }
-
-Book.prototype.closeSelf = function() {
-  this.shelve();
-  document.dispatchEvent(new Event('bookClosed'));
-}
-
 
 
 function handleKeyup(e) {
@@ -164,6 +155,21 @@ function handleKeyup(e) {
     } else if (e.keyCode === 37) {
       selectedBook.turnBackwards();
     } else if (e.keyCode === 39) {
+      selectedBook.turnForwards();
+    }
+  }
+}
+
+function handleClick(e) {
+  e = e || window.event;
+  var target = e.target || e.srcElement;
+  if (selectedBook !== null && target.tagName.toLowerCase() === 'button') {
+    if (target.classList.contains('close')) {
+      selectedBook.shelve();
+      selectedBook = null;
+    } else if (target.classList.contains('prev')) {
+      selectedBook.turnBackwards();
+    } else if (target.classList.contains('next')) {
       selectedBook.turnForwards();
     }
   }
@@ -217,7 +223,7 @@ function dismissToggle() {
 function browserHasSupport() {
   return Modernizr.classlist &&
          Modernizr.cssremunit &&
-         Modernizr.customevent &&
+         //Modernizr.customevent &&
          Modernizr.flexbox &&
          Modernizr.flexwrap &&
          Modernizr.preserve3d &&
@@ -249,8 +255,8 @@ if (doOfferToggle) {
   }
 
   document.addEventListener('keyup', handleKeyup, false);
-  document.addEventListener('bookClicked', handleBookClick);
-  document.addEventListener('bookClosed', handleBookClosed);
+  document.addEventListener('click', handleClick, false)
+  document.addEventListener('bookClicked', handleBookClick, false);
 
   document.getElementById('btnInteresting').addEventListener('click', makeInteresting, false);
   document.getElementById('btnNope').addEventListener('click', dismissToggle, false);
