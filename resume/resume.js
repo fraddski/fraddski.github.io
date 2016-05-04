@@ -249,7 +249,7 @@ if (browserHasSupport()) {
   }
   if (docWidth < minWidthRem) {
     var viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=' + (minWidthRem * remInPx) + ', initial-scale=1');
+    viewport.setAttribute('content', 'width=' + (minWidthRem * remInPx));
   }
 }
 
