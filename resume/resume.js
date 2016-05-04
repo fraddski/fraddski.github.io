@@ -47,7 +47,7 @@ Book.prototype.shelve = function() {
     this.removeNavigation();
     this.elem.classList.add('add-to-shelf');
     this.elem.classList.remove('remove-from-shelf');
-    //this.spine.focus();
+    this.spine.focus();
   }
 }
 
@@ -137,7 +137,7 @@ Book.prototype.addNavigation = function() {
 
   this.navElem = bookNav;
   this.elem.insertBefore(bookNav, this.elem.querySelectorAll('.front-cover')[0]);
-  //nextBtn.focus();
+  nextBtn.focus();
 }
 
 Book.prototype.removeNavigation = function() {

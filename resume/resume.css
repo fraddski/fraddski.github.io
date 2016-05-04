@@ -507,7 +507,7 @@ ul, li, dl, dt, dd {
                   linear-gradient(82deg, transparent 23%, #7B1FA2 24%, #7B1FA2 50%, transparent 51%),
                   linear-gradient(180deg, #4A148C 3%, transparent 3%);
     }
-    .wall .skills li span {
+    .wall .skills span {
       margin: 0;
       position: absolute;
       white-space: nowrap;
@@ -518,7 +518,7 @@ ul, li, dl, dt, dd {
       left: 50%;
       padding-top: 0.2rem;
     }
-    .wall .skills li svg {
+    .wall .skills svg {
       display: block;
       height: 80%;
       fill: #fbc56f;
@@ -759,7 +759,7 @@ ul, li, dl, dt, dd {
   top: 0;
   right: 100%;
   text-decoration: none;
-  transition: transform 0.4s linear;
+  transition: filter 0.4s linear;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: right center;
@@ -1000,6 +1000,7 @@ ul, li, dl, dt, dd {
     transform: none;
   }
   50% {
+    z-index: 100;
     transform: perspective(1000px)
                rotateY(87deg);
   }
@@ -1332,9 +1333,17 @@ ul, li, dl, dt, dd {
     flex-flow: row nowrap;
     align-items: flex-start;
   }
+  .wall .about,
+  .wall .about h2 {
+    color: black;
+    font-weight: bold;
+  }
   .wall .skills {
     margin-top: 0;
     margin-bottom: 4rem;
+  }
+  .wall .skills svg {
+    filter: none;
   }
   .wall .education {
     width: 100%;
@@ -1359,9 +1368,16 @@ ul, li, dl, dt, dd {
       left: 0;
       top: 50%;
     }
-  .wall .experience .book:nth-of-type(6) {
-    margin-left: auto;
+  .wall .book {
+    transition: none;
   }
+    .wall .book.open,
+    .wall .book.closed {
+      transform: none;
+    }
+    .wall .book:nth-of-type(6) {
+      margin-left: auto;
+    }
   .wall .profiles a:nth-of-type(1) {
     bottom: 50%;
     left: 14.5%;
@@ -1408,7 +1424,7 @@ ul, li, dl, dt, dd {
       left: 0;
       top: 66.66%;
     }
-  .wall .experience .book:nth-of-type(6) {
+  .wall .book:nth-of-type(6) {
     margin-left: 0;
   }
   .wall .profiles a:nth-of-type(1) {
