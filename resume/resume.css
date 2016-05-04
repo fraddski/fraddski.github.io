@@ -363,6 +363,10 @@ ul, li, dl, dt, dd {
     border-bottom: none;
     padding-bottom: 0;
   }
+  .reader .toggle-on {
+    right: 1rem;
+    left: 1rem;
+  }
 }
 
 
@@ -1535,6 +1539,11 @@ ul, li, dl, dt, dd {
     width: 28rem;       /* book width */
     left: -14rem;
     background-color: rgba(0,0,0,0.1);
+  }
+  .wall .book:nth-of-type(7) nav,
+  .wall .book:nth-of-type(8) nav,
+  .wall .book:nth-of-type(9) nav {
+    background-color: rgba(255,255,255,0.8);
   }
   .wall .prev,
   .wall .next,

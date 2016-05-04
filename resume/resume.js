@@ -239,12 +239,17 @@ var toggleOffer = document.getElementById('toggleWallOn');
 /* Offer to toggle only if we have a good browser above min width */
 var doOfferToggle = false;
 if (browserHasSupport()) {
+  doOfferToggle = true;
   var bodyFont = window.getComputedStyle(document.body).getPropertyValue('font-size');
   if (bodyFont.indexOf('px') > 0) {
     var remInPx = parseInt(bodyFont.slice(0, bodyFont.indexOf('px')), 10);
     if (!isNaN(remInPx)) {
-      doOfferToggle = (document.body.getBoundingClientRect().width / remInPx) >= minWidthRem;
+      var docWidth = (document.body.getBoundingClientRect().width / remInPx);
     }
+  }
+  if (docWidth < minWidthRem) {
+    var viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute('content', 'width=' + (minWidthRem * remInPx) + ', initial-scale=1');
   }
 }
 
