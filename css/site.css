@@ -138,8 +138,10 @@ table.option-table {
     padding: 8px 8px;
     background-color: #fff; }
   table.option-table td {
-    padding: 8px 8px;
+    padding: 8px 16px 8px 8px;
     vertical-align: top; }
+    table.option-table td:last-child {
+      padding-right: 8px; }
     table.option-table td p {
       padding: 0;
       margin: 0 0 10px 0; }
@@ -703,22 +705,25 @@ h2.contrast-sample-header {
   margin: 20px auto;
   font-size: 0.9em; }
 
-.fork-me img {
+.fork-me {
   position: absolute;
   top: 0;
-  right: 0;
-  border: 0; }
-@media all and (max-width: 600px) {
-  .fork-me {
-    display: none; } }
+  right: 0; }
+  .fork-me img {
+    border: none; }
+  @media all and (max-width: 600px) {
+    .fork-me {
+      display: none; } }
 
 .sample-carousel {
-  width: 400px;
+  width: 70%;
+  max-width: 700px;
   height: 400px;
   overflow: hidden;
-  margin: 30px auto;
-  border: solid 6px #d6d8dd;
-  border-radius: 5px; }
+  margin: 30px auto; }
+  .sample-carousel li img {
+    width: 100%;
+    min-width: 400px; }
   .sample-carousel li.quote {
     background-color: #5cb85c; }
     .sample-carousel li.quote:nth-child(even) {

@@ -23,10 +23,10 @@
   <p class="tagline">A simple carousel with a focus on clean, accessible markup.</p>
   <div id="intro-carousel" class="sample-carousel">
     <ul>
-      <li><img src="/img/a11y-carousel/coffee_1.jpg" alt="Takeaway coffee from Padre Coffee" width="400px" /></li>
+      <li><img src="/img/a11y-carousel/coffee_1.jpg" alt="Takeaway coffee from Padre Coffee" /></li>
       <li class="quote"><div><blockquote>I get a couple cups of coffee into me and weird things just start to happen.</blockquote><footer> &mdash; <cite>Gary Larson</cite></footer></div></li>
-      <li><img src="/img/a11y-carousel/coffee_2.jpg" alt="Takeaway coffee from Atomica Coffee" width="400px" /></li>
-      <li><img src="/img/a11y-carousel/coffee_3.jpg" alt="Takeaway coffee from De Clieu" width="400px" /></li>
+      <li><img src="/img/a11y-carousel/coffee_2.jpg" alt="Takeaway coffee from Atomica Coffee" /></li>
+      <li><img src="/img/a11y-carousel/coffee_3.jpg" alt="Takeaway coffee from De Clieu" /></li>
       <li class="quote"><div><blockquote>We didn't get a good night's sleep. We're a little depressed. Coffee solves all these problems in one delightful little cup.</blockquote><footer> &mdash; <cite>Jerry Seinfeld</cite></footer></div></li>
     </ul>
   </div>
@@ -44,6 +44,7 @@
   <ul class="display-list">
     <li>Can contain any html content</li>
     <li>Uses semantic HTML - composed of lists and buttons</li>
+    <li>Supports responsive width and height</li>
     <li>Navigation is dynamically created based on carousel items</li>
     <li>Keyboard accessible</li>
     <li>Pause/play control</li>
@@ -68,11 +69,10 @@
     &nbsp;&nbsp;&lt;/ul&gt;<br/>
     &lt;/div&gt;<br/>
   </code>
-  <p>The carousel can then be instantiated on the container div. This will generate the navigation automatically. Width and height are the only required parameters.</p>
+  <p>The carousel can then be instantiated on the container div. This will generate the navigation automatically. All parameters are optional.</p>
   <code class="sample">
     $('#carousel-container').a11ycarousel({<br/>
-    &nbsp;&nbsp;width: 450,<br/>
-    &nbsp;&nbsp;height: 200<br/>
+    &nbsp;&nbsp;doResize: true<br/>
     });
   </code>
 
@@ -81,55 +81,46 @@
     <thead>
       <tr>
         <th>Option</th>
-        <th>Required?</th>
         <th>Default</th>
         <th>Purpose</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="option-item">width</td>
-        <td>yes</td>
-        <td>-</td>
-        <td>The width of the carousel viewport, in pixels.</td>
-      </tr>
-      <tr>
-        <td class="option-item">height</td>
-        <td>yes</td>
-        <td>-</td>
-        <td>The height of the carousel viewport, in pixels.</td>
-      </tr>
-      <tr>
-        <td class="option-item">autoPlay</td>
-        <td>no</td>
+        <td>autoPlay</td>
         <td>false</td>
         <td>Whether to begin playing the carousel automatically, or leave it to the user to advance slides.</td>
       </tr>
       <tr>
-        <td class="option-item">playInterval</td>
-        <td>no</td>
+        <td>playInterval</td>
         <td>9000</td>
         <td>Length of time each slide will be displayed when auto-playing, in milliseconds.</td>
       </tr>
       <tr>
-        <td class="option-item">slideSpeed</td>
-        <td>no</td>
+        <td>slideSpeed</td>
         <td>1000</td>
         <td>Length of time taken to transition between slides, in milliseconds.</td>
       </tr>
       <tr>
-        <td class="option-item">easing</td>
-        <td>no</td>
+        <td>easing</td>
         <td>'ease'</td>
         <td>Easing to use when transitioning between slides, applied when CSS transitions are supported.</td>
       </tr>
       <tr>
-        <td class="option-item">additionalControlHeight</td>
-        <td>no</td>
+        <td>additionalControlHeight</td>
         <td>0</td>
         <td>
           <p>Height of control section, in pixels.</p>
           <p>When specified, the additional height will be added to the carousel container. If not specified or zero, the controls will overlay the carousel items.</p>
+          <p>This option is not supported for carousels of variable height.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>doResize</td>
+        <td>false</td>
+        <td>
+          <p>Whether to adjust carousel's width when the window is resized.</p>
+          <p>Set this to true when the carousel's width is variable (e.g. a percentage value). When false, the carousel will remain at the initial width despite the window size.</p>
         </td>
       </tr>
     </tbody>
@@ -141,8 +132,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#intro-carousel').a11ycarousel({
-      width: 400,
-      height: 400
+      doResize: true
     });
   });
 </script>
