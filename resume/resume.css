@@ -1275,6 +1275,8 @@ ul, li, dl, dt, dd {
   padding: 1rem 2rem 2rem;
   min-height: 100vh;
   min-width: 28.5rem;
+  max-width: 110rem;
+  margin: 0 auto;
 }
 .wall .summary-group {
   display: flex;
@@ -1289,7 +1291,7 @@ ul, li, dl, dt, dd {
 .wall .shelf-group {
   position: relative;
   width: 80%;
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 2rem auto 1.5rem auto;
 }
 .wall .shelf-group:after {
@@ -1301,17 +1303,32 @@ ul, li, dl, dt, dd {
 .wall .experience {
   width: 100%;
   justify-content: flex-start;
-  padding-left: 8rem;
+  padding-left: 12rem;
 }
 .wall .profiles a:nth-of-type(1) {
   position: absolute;
-  left: 4.25rem;
+  left: 8.25rem;
   bottom: 0;
 }
 .wall .profiles a:nth-of-type(2) {
   position: absolute;
-  right: 5%;
+  right: 9%;
   bottom: 0;
+}
+
+@media (max-width: 90rem) {
+  .wall .shelf-group {
+    max-width: 50rem;
+  }
+  .wall .experience {
+    padding-left: 8rem;
+  }
+  .wall .profiles a:nth-of-type(1) {
+    left: 4.25rem;
+  }
+  .wall .profiles a:nth-of-type(2) {
+    right: 5%;
+  }
 }
 
 @media (max-width: 76rem) {
