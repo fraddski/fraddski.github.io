@@ -303,6 +303,23 @@ ul, li, dl, dt, dd {
   }
 }
 
+@media (min-width: 100rem) {
+  .reader {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+    .reader:before {
+      width: 96rem;
+      left: -8rem;
+    }
+  .reader .toggle-on {
+    right: 33%;
+    right: calc(50% - 45rem);
+  }
+}
+
 @media (max-width: 53rem) {
   .reader {
     padding: 1rem 8% 2rem;

@@ -68,7 +68,7 @@ code {
 
 /* general */
 html, body {
-  min-height: 100%; }
+  min-height: 100vh; }
 
 body {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
@@ -91,11 +91,12 @@ h2 {
 
 .main-content {
   width: 80%;
+  max-width: 110rem;
   margin: 0 auto;
   padding: 1em 1em 2em;
   position: relative;
   background-color: #fff;
-  min-height: 100%; }
+  min-height: 100vh; }
 
 .tagline {
   text-align: center;
@@ -206,6 +207,9 @@ table.option-table {
 html.home, html.home body {
   height: auto !important; }
 
+.home section {
+  max-width: 110rem;
+  margin: 0 auto; }
 .home h2 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -507,6 +511,7 @@ ul.social span {
       margin: 0 3em 3em; } }
 .colour-selection {
   width: 100%;
+  max-width: 60rem;
   margin: 2.2em auto;
   position: relative;
   overflow: visible; }
@@ -586,6 +591,7 @@ ul.social span {
       margin: -11% 0 0 -11%; } }
 
 .contrast-results {
+  max-width: 60rem;
   margin: 0 auto;
   position: relative;
   clear: both; }
@@ -660,6 +666,11 @@ ul.social span {
   .contrast-results .stamp:hover .tooltip,
   .contrast-results .stamp:focus .tooltip {
     display: block; } }
+h2.contrast-sample-header,
+.contrast-sample,
+.contrast-footer {
+  max-width: 90rem; }
+
 h2.contrast-sample-header {
   font-size: 1.3em;
   margin: 2.2em auto 0.8em; }
