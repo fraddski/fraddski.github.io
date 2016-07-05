@@ -233,9 +233,10 @@ html.home, html.home body {
   width: 80%;
   margin: 0 auto 10em;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
   .home ul li {
     flex: 0 1 300px;
+    margin: 0 0.1em;
     position: relative; }
   .home ul a {
     display: block;
