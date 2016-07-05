@@ -421,7 +421,7 @@ ul, li, dl, dt, dd {
   display: none;
 }
 .wall .toggle-off {
-  display: none;  /* TODO */
+  display: block;
 }
 
 
@@ -471,7 +471,10 @@ ul, li, dl, dt, dd {
   }
     .wall .about p .love {
       position: absolute;
-      margin-left: -4000px;
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
     }
     .wall .about p .love-symbol {
       display: inline-block;
@@ -735,6 +738,68 @@ ul, li, dl, dt, dd {
   100% { background-position: 0.5rem 0.6rem, 0.7rem 0.9rem, 0.2rem 1rem; }
 }
 
+
+
+/******************************/
+/*           TOGGLE           */
+/******************************/
+
+.wall .toggle-off {
+  position: absolute;
+  top: 100%;
+  top: calc(100% + 1.5rem);
+  right: 7rem;
+}
+
+.wall .toggle-off .simplify {
+  display: inline-block;
+  position: relative;
+  width: 8rem;
+  font-size: 0.85rem;
+  line-height: 1.3em;
+  border: 0;
+  background: #fffcce;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px 0 rgba(0,0,0,0.07);
+  margin-top: 3.3rem;
+  transform-origin: 50% -3.3rem;
+  animation: sway 3s infinite alternate cubic-bezier(0.65, 0.04, 0.35, 0.96);
+  animation-play-state: paused;
+  animation-delay: -3.4s;
+}
+  .wall .toggle-off .simplify:before {
+    content: '';
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    left: 50%;
+    top: -2.5rem;
+    transform: translateX(-50%) rotate(45deg);
+    border-top: solid 1px #555;
+    border-left: solid 1px #555;
+    z-index: -1;
+  }
+  .wall .toggle-off .simplify:after {
+    content: '';
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    top: 0.2rem;
+    left: 0.35rem;
+    box-shadow: 7.2rem 0 0 rgba(0,0,0,0.3);
+  }
+  .wall .toggle-off .simplify:hover,
+  .wall .toggle-off .simplify:focus {
+    animation-play-state: running;
+  }
+
+@keyframes sway {
+  0% { transform: rotate(-4deg); }
+  100% { transform: rotate(4deg); }
+}
 
 
 /**********************************/
@@ -1309,7 +1374,7 @@ ul, li, dl, dt, dd {
   position: relative;
   width: 80%;
   max-width: 60rem;
-  margin: 2rem auto 1.5rem auto;
+  margin: 2rem auto 9.5rem auto;
 }
 .wall .shelf-group:after {
   content: '';

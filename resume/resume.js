@@ -208,6 +208,7 @@ function makeInteresting() {
 
 function makePlain() {
   toggleStyles();
+  toggleOffer.classList.add('show');
 }
 
 function dismissToggle() {
