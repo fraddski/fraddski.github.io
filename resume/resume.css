@@ -93,7 +93,6 @@ ul, li, dl, dt, dd {
   line-height: 1.3em;
   padding-bottom: 1rem;
   text-align: center;
-  text-transform: lowercase;
 }
 .reader h2 {
 	font-size: 1.9em;
@@ -764,7 +763,7 @@ ul, li, dl, dt, dd {
   box-shadow: 1px 2px 3px 0 rgba(0,0,0,0.07);
   margin-top: 3.3rem;
   transform-origin: 50% -3.3rem;
-  animation: sway 2s infinite alternate cubic-bezier(0.5, 0.01, 0.5, 1);
+  animation: sway 3s infinite alternate cubic-bezier(0.65, 0.04, 0.35, 0.96);
   animation-play-state: paused;
   animation-delay: -3.4s;
 }
@@ -797,8 +796,8 @@ ul, li, dl, dt, dd {
   }
 
 @keyframes sway {
-  0% { transform: rotate(-2deg); }
-  100% { transform: rotate(2deg); }
+  0% { transform: rotate(-3deg); }
+  100% { transform: rotate(4deg); }
 }
 
 
