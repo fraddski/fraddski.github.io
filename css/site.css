@@ -541,10 +541,10 @@ ul.social span {
     .colour-selection input[type="text"].invalid {
       border-color: red;
       color: red; }
-  .colour-selection input[type="text"]:nth-child(1) {
+  .colour-selection input[type="text"]:nth-of-type(1) {
     float: left;
     padding-right: 5%; }
-  .colour-selection input[type="text"]:nth-child(2) {
+  .colour-selection input[type="text"]:nth-of-type(2) {
     float: right;
     padding-left: 5%; }
   .colour-selection .ratio {
@@ -579,11 +579,11 @@ ul.social span {
     .colour-selection input[type="text"] {
       width: 100%;
       font-size: 1.75em; }
-    .colour-selection input[type="text"]:nth-child(1) {
+    .colour-selection input[type="text"]:nth-of-type(1) {
       margin-bottom: 12%;
       float: none;
       padding-right: 0.5em; }
-    .colour-selection input[type="text"]:nth-child(2) {
+    .colour-selection input[type="text"]:nth-of-type(2) {
       float: none;
       padding-right: 0.5em; }
     .colour-selection .ratio {
@@ -594,7 +594,7 @@ ul.social span {
       width: 18%;
       margin: -9% 0 0 -9%; } }
   @media (max-width: 380px) {
-    .colour-selection input[type="text"]:nth-child(1) {
+    .colour-selection input[type="text"]:nth-of-type(1) {
       margin-bottom: 16%; }
     .colour-selection .ratio {
       font-size: 1.5em;

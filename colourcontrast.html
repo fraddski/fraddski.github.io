@@ -19,9 +19,11 @@
   <h1>Colour Contrast Checker</h1>
 
   <div id="colour_selection" class="colour-selection">
-    <input type="text" id="colour_foreground" value="000000" />
-    <input type="text" id="colour_background" value="FFFFFF" />
-    <div id="ratio" class="ratio"><span></span></div>
+    <label for="colour_foreground" class="screen-reader">Foreground colour</label>
+    <input type="text" id="colour_foreground" value="#000000" />
+    <label for="colour_background" class="screen-reader">Background colour</label>
+    <input type="text" id="colour_background" value="#FFFFFF" />
+    <div class="ratio"><span class="screen-reader">Contrast ratio </span><span id="ratio"></span></div>
   </div>
 
   <ul id="results" class="contrast-results">

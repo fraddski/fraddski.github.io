@@ -9,12 +9,12 @@ var rgbColours = [[0,0,0],[255,255,255]];
 
 function updateColours(colourInput, colourType) {
 	var isColourValid = false;
-	
+
 	var col = $(colourInput).val().toUpperCase();
 	if (col.charAt(0) == "#") {
 		col = col.substring(1, col.length);
 	}
-	
+
 	if (col.indexOf('RGB(') == 0) {
 		var rgbArray = col.slice(4).replace(')', '').split(',');
 		if (rgbArray.length == 3) {
@@ -40,15 +40,17 @@ function updateColours(colourInput, colourType) {
 	}
 	if (isColourValid) {
 		$(colourInput).removeClass("invalid");
+		$(colourInput).attr("aria-invalid", "false");
 	} else {
 		$(colourInput).addClass("invalid");
+		$(colourInput).attr("aria-invalid", "true");
 	}
 }
 
 function getLuminance(rgb) {
 	for (var i =0; i<rgb.length; i++) {
 		if (rgb[i] <= 0.03928) {
-			rgb[i] = rgb[i] / 12.92;	
+			rgb[i] = rgb[i] / 12.92;
 		} else {
 			rgb[i] = Math.pow( ((rgb[i]+0.055)/1.055), 2.4 );
 		}
@@ -69,37 +71,37 @@ function calculateRatio() {
 			ratio = (l2 + .05) / (l1 + .05);
 		}
 		ratio = Math.round(ratio * 10) / 10;
-		
-		$("#ratio span").text(ratio);
-		
+
+		$("#ratio").text(ratio);
+
 		var isAAsmall = (ratio >= AA_SMALL_MIN);
 		$("#aa_small").toggleClass("pass", isAAsmall);
 		$("#aa_small .tooltip").html("<p>These colours <em>" + (isAAsmall ? "are" : "are not") + "</em> AA compliant for body text</p>");
-		
+
 		var isAAlarge = (ratio >= AA_LARGE_MIN);
 		$("#aa_large").toggleClass("pass", isAAlarge);
 		$("#aa_large .tooltip").html("<p>These colours <em>" + (isAAlarge ? "are" : "are not") + "</em> AA compliant for heading text</p>");
-		
+
 		var isAAAsmall = (ratio >= AAA_SMALL_MIN);
 		$("#aaa_small").toggleClass("pass", isAAAsmall);
 		$("#aaa_small .tooltip").html("<p>These colours <em>" + (isAAAsmall ? "are" : "are not") + "</em> AAA compliant for body text</p>");
-		
+
 		var isAAAlarge = (ratio >= AAA_LARGE_MIN);
 		$("#aaa_large").toggleClass("pass", isAAAlarge);
 		$("#aaa_large .tooltip").html("<p>These colours <em>" + (isAAAlarge ? "are" : "are not") + "</em> AAA compliant for heading text</p>");
-		
+
 		$("#sample").css("color", "rgb(" + rgbColours[FG_INDEX][0] + "," + rgbColours[FG_INDEX][1] + "," + rgbColours[FG_INDEX][2] + ")");
 		$("#sample").css("background-color", "rgb(" + rgbColours[BG_INDEX][0] + "," + rgbColours[BG_INDEX][1] + "," + rgbColours[BG_INDEX][2] + ")");
 	} else {
-		$("#ratio span").text("");
+		$("#ratio").text("");
 		$("#aa_small").removeClass("pass");
 		$("#aa_large").removeClass("pass");
 		$("#aaa_small").removeClass("pass");
 		$("#aaa_large").removeClass("pass");
-		$("#aa_small .tooltip").html("");
-		$("#aa_large .tooltip").html("");
-		$("#aaa_small .tooltip").html("");
-		$("#aaa_large .tooltip").html("");
+		$("#aa_small .tooltip").html("<p>Invalid colour entry</p>");
+		$("#aa_large .tooltip").html("<p>Invalid colour entry</p>");
+		$("#aaa_small .tooltip").html("<p>Invalid colour entry</p>");
+		$("#aaa_large .tooltip").html("<p>Invalid colour entry</p>");
 	}
 }
 
