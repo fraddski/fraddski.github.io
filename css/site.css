@@ -36,16 +36,16 @@ ul.display-list {
 p {
   margin: 1em 0; }
   p a {
-    color: #e12794;
+    color: #dc1e8d;
     text-decoration: none;
-    border-bottom: solid 1px #e12794;
+    border-bottom: solid 1px #dc1e8d;
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     -ms-transition: all 200ms ease-in;
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in; }
     p a:hover, p a:focus {
-      color: #ea6ab5;
+      color: #e95eaf;
       border-bottom-color: transparent; }
 
 code {
@@ -58,7 +58,7 @@ code {
   font-size: 130px;
   text-align: center;
   margin-top: 80px;
-  color: #e12794; }
+  color: #dc1e8d; }
 
 .four-oh-four h2 {
   font-family: "Dosis", Helvetica, Arial, sans-serif;
@@ -106,7 +106,8 @@ h2 {
   padding: 1em 1em 2em;
   position: relative;
   background-color: #fff;
-  min-height: 100vh; }
+  min-height: 100vh;
+  overflow-x: hidden; }
 
 .tagline {
   text-align: center;
@@ -202,17 +203,45 @@ table.option-table {
   .checkable-list input[type=checkbox]:checked ~ label:before {
     color: #00ae68; }
   .checkable-list a {
-    color: #e12794;
+    color: #dc1e8d;
     text-decoration: none;
-    border-bottom: solid 1px #e12794;
+    border-bottom: solid 1px #dc1e8d;
     -webkit-transition: all 200ms ease-in;
     -moz-transition: all 200ms ease-in;
     -ms-transition: all 200ms ease-in;
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in; }
     .checkable-list a:hover, .checkable-list a:focus {
-      color: #ea6ab5;
+      color: #e95eaf;
       border-bottom-color: transparent; }
+
+.fork-ribbon-wrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 7em;
+  height: 7em; }
+
+.fork-ribbon {
+  position: absolute;
+  display: block;
+  width: 200%;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-55%, -50%) rotate(40deg);
+  font-size: 0.8em;
+  line-height: 2.2em;
+  background-color: #dc1e8d;
+  color: #fff;
+  text-decoration: none;
+  border: dashed 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 4px #dc1e8d, 0 0 4px 4px rgba(0, 0, 0, 0.4); }
+  .fork-ribbon:hover, .fork-ribbon:focus {
+    background-color: #d31d87;
+    box-shadow: 0 0 0 4px #d31d87, 0 0 4px 4px rgba(0, 0, 0, 0.4);
+    border: dashed 1px rgba(255, 255, 255, 0.8); }
 
 html.home, html.home body {
   height: auto !important; }
@@ -370,7 +399,7 @@ ul.bits h3, ul.projects h3 {
   display: block;
   text-align: center;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  color: #a5176a;
+  color: #991562;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   font-size: 1.5em;
   line-height: 1.7em;
@@ -462,7 +491,7 @@ ul.social svg {
   fill: rgba(110, 111, 115, 0.5);
   transition: 0.4s fill cubic-bezier(0.65, 0.05, 0.36, 1); }
 ul.social a:hover, ul.social a:focus {
-  fill: #e12794; }
+  fill: #dc1e8d; }
 ul.social .twitter:hover svg, ul.social .twitter:focus svg, ul.social .twitter:active svg {
   fill: rgba(85, 172, 238, 0.95); }
 ul.social .github:hover svg, ul.social .github:focus svg, ul.social .github:active svg {
@@ -766,6 +795,87 @@ h2.contrast-sample-header {
       text-align: right;
       font-style: italic; }
 
+.sample-validation {
+  font-size: 0.9em;
+  text-align: center;
+  width: 90%;
+  margin: 2em auto;
+  padding: 1em 2em;
+  max-width: 500px;
+  border: solid 1px #eee; }
+  .sample-validation *[aria-hidden="true"] {
+    display: none !important; }
+  .sample-validation input, .sample-validation select, .sample-validation button {
+    font-size: 1em;
+    height: 2.4em;
+    padding: 0 0.4em;
+    border: solid 1px #bbb;
+    background-color: #fff;
+    border-radius: 5px; }
+  .sample-validation input, .sample-validation select, .sample-validation label {
+    display: block;
+    width: 100%;
+    text-align: left; }
+  .sample-validation label {
+    margin-top: 1em; }
+  .sample-validation button {
+    padding: 0 1em;
+    margin: 1.6em 0.4em 0;
+    transition: all 100ms ease-in-out; }
+    .sample-validation button:hover, .sample-validation button:focus {
+      background-color: #efefef;
+      border-color: #999; }
+  .sample-validation button[type="submit"] {
+    border: solid 1px #991562;
+    background-color: #dc1e8d;
+    color: #fff; }
+    .sample-validation button[type="submit"]:hover, .sample-validation button[type="submit"]:focus {
+      background-color: #af1870;
+      border-color: #821253; }
+  .sample-validation .invalid {
+    border: solid 1px rgba(200, 0, 0, 0.4); }
+  .sample-validation .alert {
+    text-align: left;
+    margin: 1em 0; }
+    .sample-validation .alert p {
+      margin: 0 0 0.4em; }
+    .sample-validation .alert li {
+      list-style-type: disc;
+      margin-left: 1.6em; }
+    .sample-validation .alert a {
+      text-decoration: underline; }
+      .sample-validation .alert a:hover, .sample-validation .alert a:focus {
+        text-decoration: none; }
+  .sample-validation .alert-danger {
+    background-color: rgba(220, 0, 0, 0.05);
+    border: solid 1px rgba(220, 0, 0, 0.4);
+    border-radius: 2px;
+    padding: 15px;
+    -webkit-animation: show_summary 0.2s ease-out;
+    animation: show_summary 0.2s ease-out; }
+  .sample-validation .error-indicator {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    color: #dc0000;
+    margin: 5px 0;
+    font-size: 0.85em;
+    line-height: 1.3em; }
+
+@-webkit-keyframes show_summary {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+@keyframes show_summary {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
 .examples {
   display: flex;
   flex-flow: row wrap;
@@ -780,8 +890,8 @@ h2.contrast-sample-header {
   display: inline-block;
   padding: 0.5rem 1rem;
   color: #fff;
-  background-color: #e12794;
-  border: solid 1px #bb1a78;
+  background-color: #dc1e8d;
+  border: solid 1px #af1870;
   border-radius: 3px;
   font-size: 1em; }
 
@@ -791,7 +901,7 @@ h2.contrast-sample-header {
 .tip-controls .hidden-btn:focus,
 .tip-roles .fake-btn:hover,
 .tip-roles .fake-btn:focus {
-  background-color: #d11d87; }
+  background-color: #c61b7f; }
 
 .tip-images img,
 .tip-svg svg {
@@ -800,7 +910,7 @@ h2.contrast-sample-header {
 .tip-controls .icon-btn {
   width: 3rem;
   height: 2rem;
-  background: #e12794 url("/img/tips/arrow-right.svg") 50% 50% no-repeat;
+  background: #dc1e8d url("/img/tips/arrow-right.svg") 50% 50% no-repeat;
   background-size: 50%;
   padding: 0; }
 .tip-controls .social-lnk {
@@ -810,7 +920,7 @@ h2.contrast-sample-header {
   background: transparent url("/img/social-twitter.png") 50% 50% no-repeat;
   background-size: contain; }
 .tip-controls .social-lnk:hover, .tip-controls .social-lnk:focus {
-  border-bottom: solid 1px #e12794; }
+  border-bottom: solid 1px #dc1e8d; }
 
 .tip-roles {
   padding-bottom: 10rem; }

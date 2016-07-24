@@ -9,20 +9,20 @@
   100% { transform: rotate(359deg) scale(1); }
 }
 @-webkit-keyframes flash {
-  0%    { color: #e12794; }
+  0%    { color: #dc1e8d; }
   20%   { color: #2783e1; }
   40%   { color: #ee983c; }
   60%   { color: #31e1b1; }
   80%   { color: #f0e818; }
-  100%  { color: #e12794; }
+  100%  { color: #dc1e8d; }
 }
 @keyframes flash {
-  0%    { color: #e12794; }
+  0%    { color: #dc1e8d; }
   20%   { color: #2783e1; }
   40%   { color: #ee983c; }
   60%   { color: #31e1b1; }
   80%   { color: #f0e818; }
-  100%  { color: #e12794; }
+  100%  { color: #dc1e8d; }
 }
 
 html, body, div, p, h1, h2, h3, h4, h5, ul, ol, li,
