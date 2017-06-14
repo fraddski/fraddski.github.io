@@ -1076,16 +1076,28 @@ ul, li, dl, dt, dd {
              rotateY(0deg);
 }
 
+.wall .turn-to-shelf {
+  animation: turnin 500ms linear;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+@keyframes turnin {
+  0% {
+    transform: none;
+  }
+  100% {
+    z-index: 100;
+    transform: perspective(1000px)
+               rotateY(87deg);
+  }
+}
+
 .wall .add-to-shelf {
-  animation: shelve 1s linear;
+  animation: shelve 500ms linear;
   animation-fill-mode: forwards;
 }
 @keyframes shelve {
   0% {
-    transform: none;
-  }
-  50% {
-    z-index: 100;
     transform: perspective(1000px)
                rotateY(87deg);
   }

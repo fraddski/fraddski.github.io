@@ -45,9 +45,13 @@ Book.prototype.shelve = function() {
     }
   } else {
     this.removeNavigation();
-    this.elem.classList.add('add-to-shelf');
+    this.elem.classList.add('turn-to-shelf');
     this.elem.classList.remove('remove-from-shelf');
     this.spine.focus();
+    setTimeout(function() {
+      this.elem.classList.add('add-to-shelf');
+      this.elem.classList.remove('turn-to-shelf');
+    }.bind(this), 500);
   }
 }
 
