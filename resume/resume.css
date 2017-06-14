@@ -1022,7 +1022,7 @@ ul, li, dl, dt, dd {
 }
 
 .wall .remove-from-shelf {
-  animation: unshelve 1s linear;
+  animation: unshelve 700ms linear;
   transform: none;
   z-index: 1000;
 }

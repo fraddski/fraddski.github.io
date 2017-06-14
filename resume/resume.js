@@ -32,7 +32,7 @@ Book.prototype.unshelve = function(e) {
   this.elem.classList.add('remove-from-shelf');
   this.elem.classList.remove('add-to-shelf');
   this.pageIndex = 0;
-  setTimeout(this.addNavigation.bind(this), 1000);
+  setTimeout(this.addNavigation.bind(this), 800);
 }
 
 Book.prototype.shelve = function() {
