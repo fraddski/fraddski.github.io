@@ -97,7 +97,7 @@ Book.prototype.turnBackwards = function() {
         this.frontCover.classList.remove('turned');
         this.navElem.querySelectorAll('.next')[0].focus();
       } else {
-        this.pages[this.pageIndex * 2 - 3].classList.remove('turned');
+        this.turnBackEvenPage(this.pageIndex * 2 - 3);
         this.surfacePage(this.pageIndex * 2 - 3);
       }
       this.pageIndex--;
@@ -115,6 +115,13 @@ Book.prototype.unsurfacePage = function(ind) {
   setTimeout(function() {
     this.pages[ind].classList.remove('surface');
   }.bind(this), this.pageTurnDuration * 0.875);
+}
+Book.prototype.turnBackEvenPage = function(ind) {
+  this.pages[ind].classList.add('turning');
+  this.pages[ind].classList.remove('turned');
+  setTimeout(function() {
+    this.pages[ind].classList.remove('turning');
+  }.bind(this), this.pageTurnDuration);
 }
 
 Book.prototype.addNavigation = function() {

@@ -892,6 +892,13 @@ ul, li, dl, dt, dd {
               transparent 35%);
 }
 
+.wall .contents {
+  position: absolute;
+  height: 100%;
+  width: 14rem;     /* book width */
+  z-index: 50;
+}
+
 .wall .page:before {
   /* raised page sides */
   content: '';
@@ -1020,6 +1027,7 @@ ul, li, dl, dt, dd {
   z-index: 1000;
 }
   .wall .remove-from-shelf .back-cover {
+    z-index: 80;
     transform: translateX(-100%)
                rotateY(179deg);
   }
@@ -1065,6 +1073,10 @@ ul, li, dl, dt, dd {
   z-index: 200;
   transform: perspective(1000px)
              rotateY(-180deg);
+}
+.wall .page.turning:nth-child(even) {
+  z-index: 200;
+  transform: none;
 }
 .wall .page.surface {
   z-index: 100;
@@ -1639,37 +1651,53 @@ ul, li, dl, dt, dd {
       animation: unshelve_to_middle_9 1.25s linear;
       transform: translateX(-50%);
     }
-    .wall .book.add-to-shelf:nth-of-type(1) {
-      animation: from_middle_1 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(1) {
+      animation: from_middle_1 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(2) {
-      animation: from_middle_2 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(2) {
+      animation: from_middle_2 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(3) {
-      animation: from_middle_3 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(3) {
+      animation: from_middle_3 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(5) {
-      animation: from_middle_5 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(5) {
+      animation: from_middle_5 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(6) {
-      animation: from_middle_6 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(6) {
+      animation: from_middle_6 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(7) {
-      animation: from_middle_7 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(7) {
+      animation: from_middle_7 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(8) {
-      animation: from_middle_8 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(8) {
+      animation: from_middle_8 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
-    .wall .book.add-to-shelf:nth-of-type(9) {
-      animation: from_middle_9 0.25s linear, shelve 1s linear;
-      animation-delay: 0s, 0.25s;
+    .wall .book.turn-to-shelf:nth-of-type(9) {
+      animation: from_middle_9 250ms linear, turnin 250ms linear;
+      animation-fill-mode: forwards;
+      animation-delay: 0s, 250ms;
+      z-index: 1000;
     }
 
   .wall .book nav {
