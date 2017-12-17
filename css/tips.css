@@ -1,0 +1,60 @@
+.examples {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start; }
+
+.examples > * {
+  margin: 1rem; }
+
+.tip-controls .icon-btn,
+.tip-controls .hidden-btn,
+.tip-roles .fake-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #dc1e8d;
+  border: solid 1px #af1870;
+  border-radius: 3px;
+  font-size: 1em; }
+
+.tip-controls .icon-btn:hover,
+.tip-controls .icon-btn:focus,
+.tip-controls .hidden-btn:hover,
+.tip-controls .hidden-btn:focus,
+.tip-roles .fake-btn:hover,
+.tip-roles .fake-btn:focus {
+  background-color: #c61b7f; }
+
+.tip-images img,
+.tip-svg svg {
+  display: block; }
+
+.tip-controls .icon-btn {
+  width: 3rem;
+  height: 2rem;
+  background: #dc1e8d url("/img/tips/arrow-right.svg") 50% 50% no-repeat;
+  background-size: 50%;
+  padding: 0; }
+.tip-controls .social-lnk {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: transparent url("/img/social-twitter.png") 50% 50% no-repeat;
+  background-size: contain; }
+.tip-controls .social-lnk:hover, .tip-controls .social-lnk:focus {
+  border-bottom: solid 1px #dc1e8d; }
+
+.tip-roles {
+  padding-bottom: 10rem; }
+  .tip-roles .fake-checkbox {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border: solid 1px #333;
+    border-radius: 3px;
+    background-size: contain; }
+    .tip-roles .fake-checkbox.selected {
+      background-image: url("/img/tips/checkmark.svg"); }
+
+/*# sourceMappingURL=tips.css.map */

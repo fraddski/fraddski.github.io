@@ -32,7 +32,7 @@ function initialiseMap(){
       {
         featureType: "all",
         elementType: "all",
-        stylers:[{hue: "#e12794"}, {saturation: -60}, {lightness: 60}]
+        stylers:[{hue: "#dc1e8d"}, {saturation: -60}, {lightness: 60}]
       },
       {
         featureType: "road",

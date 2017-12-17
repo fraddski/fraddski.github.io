@@ -1,0 +1,40 @@
+.fork-me {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .fork-me img {
+    border: none; }
+  @media all and (max-width: 600px) {
+    .fork-me {
+      display: none; } }
+
+.sample-carousel {
+  width: 70%;
+  max-width: 700px;
+  height: 400px;
+  overflow: hidden;
+  margin: 30px auto; }
+  .sample-carousel li img {
+    width: 100%;
+    min-width: 400px; }
+  .sample-carousel li.quote {
+    background-color: #5cb85c; }
+    .sample-carousel li.quote:nth-child(even) {
+      background-color: #5bc0de; }
+    .sample-carousel li.quote div {
+      position: relative;
+      height: 100%;
+      font-family: 'Lato'; }
+    .sample-carousel li.quote blockquote {
+      text-align: center;
+      margin: 0;
+      padding: 50px 25px 0;
+      font-size: 1.6em;
+      line-height: 1.6em; }
+    .sample-carousel li.quote footer {
+      font-size: 1.2em;
+      padding: 25px 20px 0 0;
+      text-align: right;
+      font-style: italic; }
+
+/*# sourceMappingURL=carousel.css.map */
