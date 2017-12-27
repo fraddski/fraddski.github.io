@@ -263,117 +263,146 @@ header {
         header .main-nav-list li:nth-child(3) {
           order: 3; } }
 
-html.home, html.home body {
-  height: auto !important; }
-
-.home-banner-wrap {
-  width: 100%;
-  height: 100vh;
-  background-color: #1d1f20;
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.3);
-  font-size: 12px; }
-  @media (min-width: 300px) {
-    .home-banner-wrap {
-      font-size: 14px; } }
-  @media (min-width: 600px) {
-    .home-banner-wrap {
-      font-size: 16px; } }
-  @media (min-width: 1200px) {
-    .home-banner-wrap {
-      font-size: 18px; } }
-  @media (min-width: 1800px) {
-    .home-banner-wrap {
-      font-size: 22px; } }
-  .home-banner-wrap .title-wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    color: #fff;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); }
-  .home-banner-wrap h1 {
-    margin: 0;
-    padding: 0;
-    font: 400 60px "Dosis", Helvetica, Arial, sans-serif; }
-    @media (max-width: 400px) {
-      .home-banner-wrap h1 {
-        font-size: 15vw; } }
-    @media (min-width: 1800px) {
-      .home-banner-wrap h1 {
-        font-size: 70px; } }
-  .home-banner-wrap .banner {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: transparent url("/img/home-banner/branches.jpg") 50% 45% no-repeat;
-    background-size: cover;
-    -webkit-filter: blur(0px) opacity(0.5);
-    filter: blur(0px) opacity(0.5);
-    -webkit-transition: -webkit-filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    transition: -webkit-filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53), filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53); }
-    .home-banner-wrap .banner.blur-out {
-      -webkit-filter: blur(20px) opacity(0);
-      filter: blur(20px) opacity(0); }
-    .home-banner-wrap .banner.blur-in {
-      -webkit-filter: blur(0px) opacity(0.5);
-      filter: blur(0px) opacity(0.5); }
-  .home-banner-wrap .banner-controls {
-    position: absolute;
-    left: 2em;
-    bottom: 2em;
-    width: 2em;
-    height: 2em;
-    border-radius: 0;
-    border: none;
-    background: transparent;
-    font-size: 0.75em;
-    text-indent: -9999px;
+.home {
+  height: 100%; }
+  .home body {
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    padding: 0;
-    margin: 0.5em 0;
-    display: none; }
-    .home-banner-wrap .banner-controls .symbol-wrap {
-      position: relative;
-      display: block;
-      width: 100%;
+    background: #1d1f20;
+    font-size: 12px; }
+    @media (min-width: 300px) {
+      .home body {
+        font-size: 14px; } }
+    @media (min-width: 600px) {
+      .home body {
+        font-size: 16px; } }
+    @media (min-width: 1200px) {
+      .home body {
+        font-size: 18px; } }
+    @media (min-width: 1800px) {
+      .home body {
+        font-size: 22px; } }
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent url("/img/home-banner/branches.jpg") 50% 45% no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(0px) opacity(0.5);
+  filter: blur(0px) opacity(0.5);
+  -webkit-transition: -webkit-filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  transition: filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+  .banner.blur-out {
+    -webkit-filter: blur(20px) opacity(0);
+    filter: blur(20px) opacity(0); }
+  .banner.blur-in {
+    -webkit-filter: blur(0px) opacity(0.5);
+    filter: blur(0px) opacity(0.5); }
+
+.title-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%); }
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font: 400 60px "Dosis", Helvetica, Arial, sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0); }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 15vw; } }
+  @media (min-width: 1800px) {
+    h1 {
+      font-size: 3.75em; } }
+
+.banner-controls {
+  position: absolute;
+  left: 2em;
+  top: 2em;
+  width: 2em;
+  height: 2em;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  font-size: 0.75em;
+  text-indent: -9999px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0.5em 0;
+  display: none; }
+  @media (min-width: 600px) {
+    .banner-controls {
+      top: auto;
+      bottom: 2em; } }
+  .banner-controls .symbol-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.2s ease;
+    overflow: hidden;
+    opacity: 0.8; }
+    .banner-controls .symbol-wrap:before, .banner-controls .symbol-wrap:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 100%;
-      transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.2s ease;
-      overflow: hidden;
-      opacity: 0.8; }
-      .home-banner-wrap .banner-controls .symbol-wrap:before, .home-banner-wrap .banner-controls .symbol-wrap:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #fff;
-        filter: drop-shadow(0px 0px 0.5em rgba(0, 0, 0, 0.2));
-        transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1); }
-      .home-banner-wrap .banner-controls .symbol-wrap:before {
-        transform: scale(0.4, 1) translate(-1.6em, 0); }
-      .home-banner-wrap .banner-controls .symbol-wrap:after {
-        transform: scale(0.4, 1) translate(1.6em, 0); }
-    .home-banner-wrap .banner-controls.paused .symbol-wrap {
-      transform: translate(1em, 0) scale(1.6, 1); }
-      .home-banner-wrap .banner-controls.paused .symbol-wrap:before, .home-banner-wrap .banner-controls.paused .symbol-wrap:after {
-        transform: rotate(-45deg) translate(-1em, -1em) scale(1, 1); }
-    .home-banner-wrap .banner-controls:hover .symbol-wrap, .home-banner-wrap .banner-controls:focus .symbol-wrap {
-      opacity: 1; }
-    .home-banner-wrap .banner-controls:active {
-      transform: scale(1.1, 1.1);
-      outline: none; }
-  .home-banner-wrap .banner.animating ~ .banner-controls {
-    display: block; }
+      width: 100%;
+      background-color: #fff;
+      filter: drop-shadow(0px 0px 0.5em rgba(0, 0, 0, 0.2));
+      transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1); }
+    .banner-controls .symbol-wrap:before {
+      transform: scale(0.4, 1) translate(-1.6em, 0); }
+    .banner-controls .symbol-wrap:after {
+      transform: scale(0.4, 1) translate(1.6em, 0); }
+  .banner-controls.paused .symbol-wrap {
+    transform: translate(1em, 0) scale(1.6, 1); }
+    .banner-controls.paused .symbol-wrap:before, .banner-controls.paused .symbol-wrap:after {
+      transform: rotate(-45deg) translate(-1em, -1em) scale(1, 1); }
+  .banner-controls:hover .symbol-wrap, .banner-controls:focus .symbol-wrap {
+    opacity: 1; }
+  .banner-controls:active {
+    transform: scale(1.1, 1.1);
+    outline: none; }
+
+.banner.animating ~ .banner-controls {
+  display: block; }
 
 .social {
-  display: flex;
-  font-size: 0.75em;
   position: absolute;
-  right: 2em;
-  bottom: 2em; }
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 120%);
+  font-size: 3.5vw;
+  display: flex; }
+  @media (min-width: 340px) {
+    .social {
+      font-size: 0.85em; } }
+  @media (min-width: 600px) {
+    .social {
+      font-size: 0.75em; } }
+  .social:before {
+    content: '';
+    position: absolute;
+    width: 55%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    left: 50%;
+    top: -75%;
+    transform: translateX(-50%); }
   .social li {
     display: block;
     margin-right: 1em; }
@@ -387,16 +416,9 @@ html.home, html.home body {
     height: 3em;
     fill: rgba(255, 255, 255, 0.8);
     filter: drop-shadow(0px 0px 0.5em rgba(0, 0, 0, 0.2));
-    transition: 0.2s fill cubic-bezier(0.65, 0.05, 0.36, 1); }
-  .social a:hover, .social a:focus {
+    transition: 0.2s fill cubic-bezier(0.65, 0.05, 0.36, 1);
+    -webkit-font-smoothing: antialiased; }
+  .social a:hover svg, .social a:focus svg {
     fill: #dc1e8d; }
-  .social .twitter:hover svg, .social .twitter:focus svg, .social .twitter:active svg {
-    fill: rgba(85, 172, 238, 0.95); }
-  .social .github:hover svg, .social .github:focus svg, .social .github:active svg {
-    fill: rgba(0, 0, 0, 0.95); }
-  .social .codepen:hover svg, .social .codepen:focus svg, .social .codepen:active svg {
-    fill: rgba(0, 0, 0, 0.95); }
-  .social .linkedin:hover svg, .social .linkedin:focus svg, .social .linkedin:active svg {
-    fill: rgba(26, 133, 188, 0.95); }
 
 /*# sourceMappingURL=site.css.map */
