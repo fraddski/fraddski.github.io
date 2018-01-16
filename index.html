@@ -15,11 +15,8 @@
 	<body>
     
 
-<div id="homeBanner" class="banner"></div>
-<button type="button" id="btnBannerPause" class="banner-controls" aria-label="Pause header animation"><span class="symbol-wrap"></span></button>
-
 <div class="title-wrap">
-  <h1>skyefradd.me</h1>
+  <h1 aria-label="Skye Fradd dot me">skyefradd.me</h1>
 </div>
 
 <ul class="social">
@@ -119,6 +116,14 @@
     </a>
   </li>
 </ul>
+
+<figure>
+  <div id="homeBanner" class="banner" role="img" aria-label="Tree branches in autumn, seen from below"></div>
+  <figcaption>
+    <div class="img-caption"><span id="captionText">Real Autumn</span><span id="captionLocation" class="caption-location">Ravenscourt Park, London</span></div>
+    <button type="button" id="btnBannerPause" class="banner-controls" aria-label="Pause images"><span class="symbol-wrap"></span></button>
+  </figcaption>
+</figure>
 
 
 		<script src="js/site.min.js" type="text/javascript"></script>
