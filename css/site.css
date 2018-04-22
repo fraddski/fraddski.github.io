@@ -360,18 +360,18 @@ figure {
   bottom: 0;
   background: transparent url("/img/home-banner/branches.jpg") 50% 45% no-repeat;
   background-size: cover;
-  -webkit-filter: blur(0px) opacity(0.5);
-  filter: blur(0px) opacity(0.5);
+  -webkit-filter: grayscale(0) opacity(0.5);
+  filter: grayscale(0) opacity(0.5);
   -webkit-transition: -webkit-filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   transition: filter 3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   -webkit-transform: translateZ(0);
   transform: translateZ(0); }
   .banner.blur-out {
-    -webkit-filter: blur(20px) opacity(0);
-    filter: blur(20px) opacity(0); }
+    -webkit-filter: grayscale(85%) opacity(0);
+    filter: grayscale(85%) opacity(0); }
   .banner.blur-in {
-    -webkit-filter: blur(0px) opacity(0.5);
-    filter: blur(0px) opacity(0.5); }
+    -webkit-filter: grayscale(0) opacity(0.5);
+    filter: grayscale(0) opacity(0.5); }
 
 .banner-controls {
   position: absolute;
