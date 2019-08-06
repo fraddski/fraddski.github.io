@@ -538,15 +538,26 @@ figure {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 95%);
   color: #fff;
   opacity: 0.8;
-  font-size: 0.85em;
+  font-size: 0.9em;
   padding: 1.5em 1em 1em;
   text-align: center;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
   transition: opacity 3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 }
 .img-caption .caption-location {
-  font-style: italic;
-  padding-left: 0.6em;
+  position: relative;
+  padding-left: 0.8em;
+  margin-left: 0.8em;
+  opacity: 0.9;
+}
+.img-caption .caption-location:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 @media (min-width: 400px) {
   .img-caption {
