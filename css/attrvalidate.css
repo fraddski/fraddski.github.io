@@ -5,79 +5,102 @@
   margin: 2em auto;
   padding: 1em 2em;
   max-width: 500px;
-  border: solid 1px #eee; }
-  .sample-validation *[aria-hidden="true"] {
-    display: none !important; }
-  .sample-validation input, .sample-validation select, .sample-validation button {
-    font-size: 1em;
-    height: 2.4em;
-    padding: 0 0.4em;
-    border: solid 1px #bbb;
-    background-color: #fff;
-    border-radius: 5px; }
-  .sample-validation input, .sample-validation select, .sample-validation label {
-    display: block;
-    width: 100%;
-    text-align: left; }
-  .sample-validation label {
-    margin-top: 1em; }
-  .sample-validation button {
-    padding: 0 1em;
-    margin: 1.6em 0.4em 0;
-    transition: all 100ms ease-in-out; }
-    .sample-validation button:hover, .sample-validation button:focus {
-      background-color: #efefef;
-      border-color: #999; }
-  .sample-validation button[type="submit"] {
-    border: solid 1px #991562;
-    background-color: #dc1e8d;
-    color: #fff; }
-    .sample-validation button[type="submit"]:hover, .sample-validation button[type="submit"]:focus {
-      background-color: #af1870;
-      border-color: #821253; }
-  .sample-validation .invalid {
-    border: solid 1px rgba(200, 0, 0, 0.4); }
-  .sample-validation .alert {
-    text-align: left;
-    margin: 1em 0; }
-    .sample-validation .alert p {
-      margin: 0 0 0.4em; }
-    .sample-validation .alert li {
-      list-style-type: disc;
-      margin-left: 1.6em; }
-    .sample-validation .alert a {
-      text-decoration: underline; }
-      .sample-validation .alert a:hover, .sample-validation .alert a:focus {
-        text-decoration: none; }
-  .sample-validation .alert-danger {
-    background-color: rgba(220, 0, 0, 0.05);
-    border: solid 1px rgba(220, 0, 0, 0.4);
-    border-radius: 2px;
-    padding: 15px;
-    -webkit-animation: show_summary 0.2s ease-out;
-    animation: show_summary 0.2s ease-out; }
-  .sample-validation .error-indicator {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    color: #dc0000;
-    margin: 5px 0;
-    font-size: 0.85em;
-    line-height: 1.3em; }
+  border: solid 1px #eee;
+}
+.sample-validation *[aria-hidden=true] {
+  display: none !important;
+}
+.sample-validation input, .sample-validation select, .sample-validation button {
+  font-size: 1em;
+  height: 2.4em;
+  padding: 0 0.4em;
+  border: solid 1px #bbb;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.sample-validation input, .sample-validation select, .sample-validation label {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+.sample-validation label {
+  margin-top: 1em;
+}
+.sample-validation button {
+  padding: 0 1em;
+  margin: 1.6em 0.4em 0;
+  transition: all 100ms ease-in-out;
+}
+.sample-validation button:hover, .sample-validation button:focus {
+  background-color: #efefef;
+  border-color: #999;
+}
+.sample-validation button[type=submit] {
+  border: solid 1px #991562;
+  background-color: #dc1e8d;
+  color: #fff;
+}
+.sample-validation button[type=submit]:hover, .sample-validation button[type=submit]:focus {
+  background-color: #af1870;
+  border-color: #821253;
+}
+.sample-validation .invalid {
+  border: solid 1px rgba(200, 0, 0, 0.4);
+}
+.sample-validation .alert {
+  text-align: left;
+  margin: 1em 0;
+}
+.sample-validation .alert p {
+  margin: 0 0 0.4em;
+}
+.sample-validation .alert li {
+  list-style-type: disc;
+  margin-left: 1.6em;
+}
+.sample-validation .alert a {
+  text-decoration: underline;
+}
+.sample-validation .alert a:hover, .sample-validation .alert a:focus {
+  text-decoration: none;
+}
+.sample-validation .alert-danger {
+  background-color: rgba(220, 0, 0, 0.05);
+  border: solid 1px rgba(220, 0, 0, 0.4);
+  border-radius: 2px;
+  padding: 15px;
+  -webkit-animation: show_summary 0.2s ease-out;
+  animation: show_summary 0.2s ease-out;
+}
+.sample-validation .error-indicator {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  color: #dc0000;
+  margin: 5px 0;
+  font-size: 0.85em;
+  line-height: 1.3em;
+}
 
 @-webkit-keyframes show_summary {
   0% {
     transform: scale(0.9);
-    opacity: 0.6; }
+    opacity: 0.6;
+  }
   100% {
     transform: scale(1);
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes show_summary {
   0% {
     transform: scale(0.9);
-    opacity: 0.6; }
+    opacity: 0.6;
+  }
   100% {
     transform: scale(1);
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=attrvalidate.css.map */
